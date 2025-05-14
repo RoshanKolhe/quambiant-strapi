@@ -1,0 +1,40 @@
+{
+  "collectionName": "components_homepage_stats_sections",
+  "info": {
+    "displayName": "StatsSection",
+    "icon": "connector"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "text"
+    },
+    "statOneNumber": {
+      "type": "biginteger"
+    },
+    "statOneLabel": {
+      "type": "string"
+    },
+    "statTwoNumber": {
+      "type": "biginteger"
+    },
+    "statTwoLabel": {
+      "type": "string"
+    },
+    "statThreeNumber": {
+      "type": "biginteger"
+    },
+    "statThreeLabel": {
+      "type": "string"
+    },
+    "statFourNumber": {
+      "type": "biginteger"
+    },
+    "statFourLabel": {
+      "type": "string"
+    }
+  }
+}

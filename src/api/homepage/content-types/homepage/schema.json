@@ -1,0 +1,38 @@
+{
+  "kind": "singleType",
+  "collectionName": "homepages",
+  "info": {
+    "singularName": "homepage",
+    "pluralName": "homepages",
+    "displayName": "Homepage",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "hero": {
+      "displayName": "hero",
+      "type": "component",
+      "repeatable": false,
+      "component": "homepage.hero"
+    },
+    "StatsSection": {
+      "displayName": "StatsSection",
+      "type": "component",
+      "repeatable": false,
+      "component": "homepage.stats-section"
+    },
+    "TimelineSection": {
+      "displayName": "TimelineSection",
+      "type": "component",
+      "repeatable": false,
+      "component": "homepage.timeline-section"
+    },
+    "HomeStoriesSlider": {
+      "type": "component",
+      "repeatable": true,
+      "component": "common.shared-slider"
+    }
+  }
+}

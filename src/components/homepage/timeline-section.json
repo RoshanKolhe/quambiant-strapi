@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_homepage_timeline_sections",
+  "info": {
+    "displayName": "TimelineSection",
+    "icon": "clock"
+  },
+  "options": {},
+  "attributes": {
+    "Heading": {
+      "type": "string"
+    },
+    "Subheading": {
+      "type": "text"
+    },
+    "Steps": {
+      "displayName": "Steps",
+      "type": "component",
+      "repeatable": true,
+      "component": "homepage.steps"
+    }
+  }
+}

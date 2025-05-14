@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_common_shared_sliders",
+  "info": {
+    "displayName": "SharedSlider",
+    "icon": "apps"
+  },
+  "options": {},
+  "attributes": {
+    "media": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "heading": {
+      "type": "string"
+    },
+    "subheading": {
+      "type": "string"
+    },
+    "customerName": {
+      "type": "string"
+    },
+    "state": {
+      "type": "string"
+    }
+  }
+}

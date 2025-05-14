@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_homepage_steps",
+  "info": {
+    "displayName": "Steps",
+    "icon": "stack"
+  },
+  "options": {},
+  "attributes": {
+    "Image": {
+      "allowedTypes": [
+        "images",
+        "files"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "StepHeading": {
+      "type": "string"
+    },
+    "StepSubheading": {
+      "type": "text"
+    }
+  }
+}
