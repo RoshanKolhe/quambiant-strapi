@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_homepage_spotlights",
+  "info": {
+    "displayName": "Spotlight",
+    "icon": "lightbulb"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string",
+      "required": true
+    },
+    "subheading": {
+      "type": "text",
+      "required": true
+    },
+    "Card": {
+      "displayName": "Card",
+      "type": "component",
+      "repeatable": true,
+      "component": "homepage.card"
+    }
+  }
+}

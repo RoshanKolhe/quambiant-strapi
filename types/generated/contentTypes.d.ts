@@ -394,6 +394,7 @@ export interface ApiHomepageHomepage extends Struct.SingleTypeSchema {
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
+    Spotlight: Schema.Attribute.Component<'homepage.spotlight', false>;
     StatsSection: Schema.Attribute.Component<'homepage.stats-section', false>;
     TimelineSection: Schema.Attribute.Component<
       'homepage.timeline-section',

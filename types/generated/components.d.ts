@@ -29,6 +29,21 @@ export interface CommonSharedSlider extends Struct.ComponentSchema {
   };
 }
 
+export interface HomepageCard extends Struct.ComponentSchema {
+  collectionName: 'components_homepage_cards';
+  info: {
+    displayName: 'Card';
+    icon: 'book';
+  };
+  attributes: {
+    date: Schema.Attribute.Date;
+    Image: Schema.Attribute.Media<'images' | 'files'> &
+      Schema.Attribute.Required;
+    subtitle: Schema.Attribute.String & Schema.Attribute.Required;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface HomepageHero extends Struct.ComponentSchema {
   collectionName: 'components_homepage_heroes';
   info: {
@@ -43,6 +58,19 @@ export interface HomepageHero extends Struct.ComponentSchema {
     heroImage: Schema.Attribute.Media<'images' | 'files'> &
       Schema.Attribute.Required;
     subtitle: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface HomepageSpotlight extends Struct.ComponentSchema {
+  collectionName: 'components_homepage_spotlights';
+  info: {
+    displayName: 'Spotlight';
+    icon: 'lightbulb';
+  };
+  attributes: {
+    Card: Schema.Attribute.Component<'homepage.card', true>;
+    heading: Schema.Attribute.String & Schema.Attribute.Required;
+    subheading: Schema.Attribute.Text & Schema.Attribute.Required;
   };
 }
 
@@ -98,7 +126,9 @@ declare module '@strapi/strapi' {
     export interface ComponentSchemas {
       'common.contact-us': CommonContactUs;
       'common.shared-slider': CommonSharedSlider;
+      'homepage.card': HomepageCard;
       'homepage.hero': HomepageHero;
+      'homepage.spotlight': HomepageSpotlight;
       'homepage.stats-section': HomepageStatsSection;
       'homepage.steps': HomepageSteps;
       'homepage.timeline-section': HomepageTimelineSection;

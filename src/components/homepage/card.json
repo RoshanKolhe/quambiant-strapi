@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_homepage_cards",
+  "info": {
+    "displayName": "Card",
+    "icon": "book"
+  },
+  "options": {},
+  "attributes": {
+    "Image": {
+      "allowedTypes": [
+        "images",
+        "files"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "date": {
+      "type": "date"
+    },
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

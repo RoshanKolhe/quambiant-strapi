@@ -39,6 +39,12 @@
       "type": "component",
       "repeatable": false,
       "component": "common.contact-us"
+    },
+    "Spotlight": {
+      "displayName": "Spotlight",
+      "type": "component",
+      "repeatable": false,
+      "component": "homepage.spotlight"
     }
   }
 }
