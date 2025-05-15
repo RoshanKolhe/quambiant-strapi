@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "leads",
+  "info": {
+    "singularName": "lead",
+    "pluralName": "leads",
+    "displayName": "leads",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "email": {
+      "type": "email",
+      "required": true
+    },
+    "location": {
+      "type": "string"
+    },
+    "whatsAppUpdates": {
+      "type": "boolean"
+    },
+    "phone": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

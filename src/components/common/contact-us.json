@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_common_contactuses",
+  "info": {
+    "displayName": "ContactUs",
+    "icon": "phone"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string",
+      "required": true
+    },
+    "contactNumber": {
+      "type": "biginteger",
+      "required": true
+    },
+    "whatsAppNumber": {
+      "type": "biginteger",
+      "required": true
+    }
+  }
+}

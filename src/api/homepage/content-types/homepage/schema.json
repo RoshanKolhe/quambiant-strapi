@@ -33,6 +33,12 @@
       "type": "component",
       "repeatable": true,
       "component": "common.shared-slider"
+    },
+    "ContactUs": {
+      "displayName": "ContactUs",
+      "type": "component",
+      "repeatable": false,
+      "component": "common.contact-us"
     }
   }
 }

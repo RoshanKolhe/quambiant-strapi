@@ -1,5 +1,18 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface CommonContactUs extends Struct.ComponentSchema {
+  collectionName: 'components_common_contactuses';
+  info: {
+    displayName: 'ContactUs';
+    icon: 'phone';
+  };
+  attributes: {
+    contactNumber: Schema.Attribute.BigInteger & Schema.Attribute.Required;
+    heading: Schema.Attribute.String & Schema.Attribute.Required;
+    whatsAppNumber: Schema.Attribute.BigInteger & Schema.Attribute.Required;
+  };
+}
+
 export interface CommonSharedSlider extends Struct.ComponentSchema {
   collectionName: 'components_common_shared_sliders';
   info: {
@@ -83,6 +96,7 @@ export interface HomepageTimelineSection extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'common.contact-us': CommonContactUs;
       'common.shared-slider': CommonSharedSlider;
       'homepage.hero': HomepageHero;
       'homepage.stats-section': HomepageStatsSection;
