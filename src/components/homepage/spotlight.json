@@ -2,15 +2,16 @@
   "collectionName": "components_homepage_spotlights",
   "info": {
     "displayName": "Spotlight",
-    "icon": "lightbulb"
+    "icon": "lightbulb",
+    "description": ""
   },
   "options": {},
   "attributes": {
-    "heading": {
+    "Heading": {
       "type": "string",
       "required": true
     },
-    "subheading": {
+    "SubHeading": {
       "type": "text",
       "required": true
     },

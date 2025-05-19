@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_common_awards_sliders",
+  "info": {
+    "displayName": "AwardsSlider"
+  },
+  "options": {},
+  "attributes": {
+    "Image": {
+      "allowedTypes": [
+        "images",
+        "files"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    }
+  }
+}

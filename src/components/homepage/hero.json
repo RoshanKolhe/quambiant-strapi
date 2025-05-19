@@ -7,30 +7,30 @@
   },
   "options": {},
   "attributes": {
-    "heading": {
+    "Heading": {
       "type": "string",
       "required": true
     },
-    "subtitle": {
+    "SubHeading": {
       "type": "string",
       "required": true
     },
-    "buttonText": {
+    "ButtonText": {
       "type": "string",
       "required": true
     },
-    "buttonUrl": {
+    "ButtonUrl": {
       "type": "string",
       "required": true
     },
-    "heroImage": {
+    "HeroImage": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
       "allowedTypes": [
         "images",
         "files"
-      ],
-      "type": "media",
-      "multiple": false,
-      "required": true
+      ]
     }
   }
 }

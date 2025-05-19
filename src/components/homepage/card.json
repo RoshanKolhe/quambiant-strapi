@@ -2,26 +2,27 @@
   "collectionName": "components_homepage_cards",
   "info": {
     "displayName": "Card",
-    "icon": "book"
+    "icon": "book",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "Image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
       "allowedTypes": [
         "images",
         "files"
-      ],
-      "type": "media",
-      "multiple": false,
-      "required": true
+      ]
     },
-    "date": {
+    "Date": {
       "type": "date"
     },
-    "title": {
+    "Title": {
       "type": "string"
     },
-    "subtitle": {
+    "SubTitle": {
       "type": "string",
       "required": true
     }

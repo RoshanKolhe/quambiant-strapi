@@ -1,0 +1,34 @@
+{
+  "collectionName": "components_common_home_stories_sliders",
+  "info": {
+    "displayName": "HomeStoriesSlider"
+  },
+  "options": {},
+  "attributes": {
+    "Heading": {
+      "type": "string",
+      "required": true
+    },
+    "SubHeading": {
+      "type": "string",
+      "required": true
+    },
+    "Media": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "Name": {
+      "type": "string",
+      "required": false
+    },
+    "State": {
+      "type": "string"
+    }
+  }
+}

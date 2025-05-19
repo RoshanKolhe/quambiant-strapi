@@ -29,11 +29,6 @@
       "repeatable": false,
       "component": "homepage.timeline-section"
     },
-    "HomeStoriesSlider": {
-      "type": "component",
-      "repeatable": true,
-      "component": "common.shared-slider"
-    },
     "ContactUs": {
       "displayName": "ContactUs",
       "type": "component",
@@ -45,6 +40,24 @@
       "type": "component",
       "repeatable": false,
       "component": "homepage.spotlight"
+    },
+    "HomeStories": {
+      "displayName": "HomeStories",
+      "type": "component",
+      "repeatable": false,
+      "component": "homepage.home-stories"
+    },
+    "Awards": {
+      "displayName": "Awards",
+      "type": "component",
+      "repeatable": false,
+      "component": "common.awards"
+    },
+    "GreenBuildingStats": {
+      "displayName": "GreenBuildingStats",
+      "type": "component",
+      "repeatable": false,
+      "component": "homepage.green-building-stats"
     }
   }
 }

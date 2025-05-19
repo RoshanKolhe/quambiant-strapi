@@ -1,0 +1,44 @@
+{
+  "collectionName": "components_homepage_green_building_stats",
+  "info": {
+    "displayName": "GreenBuildingStats"
+  },
+  "options": {},
+  "attributes": {
+    "Heading": {
+      "type": "string"
+    },
+    "SubHeading": {
+      "type": "string"
+    },
+    "BackgroundVideo": {
+      "allowedTypes": [
+        "files",
+        "videos"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "StatOneValue": {
+      "type": "string",
+      "required": true
+    },
+    "StatOneDescription": {
+      "type": "string",
+      "required": true
+    },
+    "StatTwoValue": {
+      "type": "string"
+    },
+    "StatTwoDescription": {
+      "type": "string"
+    },
+    "StatThreeValue": {
+      "type": "string"
+    },
+    "StatThreeDescription": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_homepage_home_stories",
+  "info": {
+    "displayName": "HomeStories"
+  },
+  "options": {},
+  "attributes": {
+    "Heading": {
+      "type": "string"
+    },
+    "SubHeading": {
+      "type": "string"
+    },
+    "HomeStoriesSlider": {
+      "type": "component",
+      "repeatable": true,
+      "component": "common.home-stories-slider"
+    }
+  }
+}

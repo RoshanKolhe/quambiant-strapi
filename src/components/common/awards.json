@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_common_awards",
+  "info": {
+    "displayName": "Awards"
+  },
+  "options": {},
+  "attributes": {
+    "Heading": {
+      "type": "string"
+    },
+    "SubHeading": {
+      "type": "string"
+    },
+    "AwardsSlider": {
+      "displayName": "AwardsSlider",
+      "type": "component",
+      "repeatable": true,
+      "component": "common.awards-slider"
+    }
+  }
+}

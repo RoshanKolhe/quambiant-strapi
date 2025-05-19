@@ -381,12 +381,17 @@ export interface ApiHomepageHomepage extends Struct.SingleTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
+    Awards: Schema.Attribute.Component<'common.awards', false>;
     ContactUs: Schema.Attribute.Component<'common.contact-us', false>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    GreenBuildingStats: Schema.Attribute.Component<
+      'homepage.green-building-stats',
+      false
+    >;
     hero: Schema.Attribute.Component<'homepage.hero', false>;
-    HomeStoriesSlider: Schema.Attribute.Component<'common.shared-slider', true>;
+    HomeStories: Schema.Attribute.Component<'homepage.home-stories', false>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
