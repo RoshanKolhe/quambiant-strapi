@@ -135,6 +135,37 @@ export interface HomepageHomeStories extends Struct.ComponentSchema {
   };
 }
 
+export interface HomepageProjectSteps extends Struct.ComponentSchema {
+  collectionName: 'components_homepage_project_steps';
+  info: {
+    displayName: 'ProjectSteps';
+  };
+  attributes: {
+    Date: Schema.Attribute.Date;
+    ProjectStatus: Schema.Attribute.Enumeration<
+      ['Ongoing', 'Upcoming', 'Completed']
+    >;
+    Title: Schema.Attribute.String;
+  };
+}
+
+export interface HomepageProjects extends Struct.ComponentSchema {
+  collectionName: 'components_homepage_projects';
+  info: {
+    description: '';
+    displayName: 'Projects';
+  };
+  attributes: {
+    Image: Schema.Attribute.Media<'images' | 'files'> &
+      Schema.Attribute.Required;
+    Location: Schema.Attribute.String;
+    ProjectSteps: Schema.Attribute.Component<'homepage.project-steps', true>;
+    SubTitle: Schema.Attribute.String;
+    Tags: Schema.Attribute.Component<'homepage.tags', true>;
+    Title: Schema.Attribute.String;
+  };
+}
+
 export interface HomepageSpotlight extends Struct.ComponentSchema {
   collectionName: 'components_homepage_spotlights';
   info: {
@@ -184,6 +215,16 @@ export interface HomepageSteps extends Struct.ComponentSchema {
   };
 }
 
+export interface HomepageTags extends Struct.ComponentSchema {
+  collectionName: 'components_homepage_tags';
+  info: {
+    displayName: 'Tags';
+  };
+  attributes: {
+    Label: Schema.Attribute.String;
+  };
+}
+
 export interface HomepageTimelineSection extends Struct.ComponentSchema {
   collectionName: 'components_homepage_timeline_sections';
   info: {
@@ -194,6 +235,18 @@ export interface HomepageTimelineSection extends Struct.ComponentSchema {
     Heading: Schema.Attribute.String;
     Steps: Schema.Attribute.Component<'homepage.steps', true>;
     Subheading: Schema.Attribute.Text;
+  };
+}
+
+export interface HomepageUpcomingLaunches extends Struct.ComponentSchema {
+  collectionName: 'components_homepage_upcoming_launches';
+  info: {
+    displayName: 'UpcomingLaunches';
+  };
+  attributes: {
+    Heading: Schema.Attribute.String & Schema.Attribute.Required;
+    Projects: Schema.Attribute.Component<'homepage.projects', true>;
+    SubHeading: Schema.Attribute.String;
   };
 }
 
@@ -209,10 +262,14 @@ declare module '@strapi/strapi' {
       'homepage.green-building-stats': HomepageGreenBuildingStats;
       'homepage.hero': HomepageHero;
       'homepage.home-stories': HomepageHomeStories;
+      'homepage.project-steps': HomepageProjectSteps;
+      'homepage.projects': HomepageProjects;
       'homepage.spotlight': HomepageSpotlight;
       'homepage.stats-section': HomepageStatsSection;
       'homepage.steps': HomepageSteps;
+      'homepage.tags': HomepageTags;
       'homepage.timeline-section': HomepageTimelineSection;
+      'homepage.upcoming-launches': HomepageUpcomingLaunches;
     }
   }
 }

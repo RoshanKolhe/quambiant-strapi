@@ -1,0 +1,40 @@
+{
+  "collectionName": "components_homepage_projects",
+  "info": {
+    "displayName": "Projects",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "SubTitle": {
+      "type": "string"
+    },
+    "Location": {
+      "type": "string"
+    },
+    "Tags": {
+      "displayName": "Tags",
+      "type": "component",
+      "repeatable": true,
+      "component": "homepage.tags"
+    },
+    "ProjectSteps": {
+      "displayName": "ProjectSteps",
+      "type": "component",
+      "repeatable": true,
+      "component": "homepage.project-steps"
+    },
+    "Image": {
+      "allowedTypes": [
+        "images",
+        "files"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    }
+  }
+}

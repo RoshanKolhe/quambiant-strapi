@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_homepage_project_steps",
+  "info": {
+    "displayName": "ProjectSteps"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Date": {
+      "type": "date"
+    },
+    "ProjectStatus": {
+      "type": "enumeration",
+      "enum": [
+        "Ongoing",
+        "Upcoming",
+        "Completed"
+      ]
+    }
+  }
+}

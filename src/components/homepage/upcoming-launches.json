@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_homepage_upcoming_launches",
+  "info": {
+    "displayName": "UpcomingLaunches"
+  },
+  "options": {},
+  "attributes": {
+    "Heading": {
+      "type": "string",
+      "required": true
+    },
+    "SubHeading": {
+      "type": "string"
+    },
+    "Projects": {
+      "type": "component",
+      "repeatable": true,
+      "component": "homepage.projects"
+    }
+  }
+}

@@ -405,6 +405,10 @@ export interface ApiHomepageHomepage extends Struct.SingleTypeSchema {
       'homepage.timeline-section',
       false
     >;
+    UpcomingLaunches: Schema.Attribute.Component<
+      'homepage.upcoming-launches',
+      false
+    >;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
