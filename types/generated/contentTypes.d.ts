@@ -390,7 +390,7 @@ export interface ApiHomepageHomepage extends Struct.SingleTypeSchema {
       'homepage.green-building-stats',
       false
     >;
-    hero: Schema.Attribute.Component<'homepage.hero', false>;
+    Hero: Schema.Attribute.Component<'homepage.hero', false>;
     HomeStories: Schema.Attribute.Component<'homepage.home-stories', false>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
