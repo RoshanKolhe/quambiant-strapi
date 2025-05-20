@@ -11,7 +11,7 @@
     "draftAndPublish": true
   },
   "attributes": {
-    "hero": {
+    "Hero": {
       "displayName": "hero",
       "type": "component",
       "repeatable": false,
