@@ -250,6 +250,18 @@ export interface HomepageUpcomingLaunches extends Struct.ComponentSchema {
   };
 }
 
+export interface NewsroomHeroSection extends Struct.ComponentSchema {
+  collectionName: 'components_newsroom_hero_sections';
+  info: {
+    displayName: 'HeroSection';
+  };
+  attributes: {
+    Heading: Schema.Attribute.String;
+    Image: Schema.Attribute.Media<'images' | 'files'>;
+    SubHeading: Schema.Attribute.String;
+  };
+}
+
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
@@ -270,6 +282,7 @@ declare module '@strapi/strapi' {
       'homepage.tags': HomepageTags;
       'homepage.timeline-section': HomepageTimelineSection;
       'homepage.upcoming-launches': HomepageUpcomingLaunches;
+      'newsroom.hero-section': NewsroomHeroSection;
     }
   }
 }

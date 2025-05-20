@@ -1,0 +1,20 @@
+{
+  "kind": "singleType",
+  "collectionName": "news_rooms",
+  "info": {
+    "singularName": "news-room",
+    "pluralName": "news-rooms",
+    "displayName": "NewsRoom"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "HeroSection": {
+      "displayName": "HeroSection",
+      "type": "component",
+      "repeatable": false,
+      "component": "newsroom.hero-section"
+    }
+  }
+}

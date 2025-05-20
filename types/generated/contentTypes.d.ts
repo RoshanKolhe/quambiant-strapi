@@ -445,6 +445,34 @@ export interface ApiLeadLead extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiNewsRoomNewsRoom extends Struct.SingleTypeSchema {
+  collectionName: 'news_rooms';
+  info: {
+    displayName: 'NewsRoom';
+    pluralName: 'news-rooms';
+    singularName: 'news-room';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    HeroSection: Schema.Attribute.Component<'newsroom.hero-section', false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::news-room.news-room'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface PluginContentReleasesRelease
   extends Struct.CollectionTypeSchema {
   collectionName: 'strapi_releases';
@@ -956,6 +984,7 @@ declare module '@strapi/strapi' {
       'admin::user': AdminUser;
       'api::homepage.homepage': ApiHomepageHomepage;
       'api::lead.lead': ApiLeadLead;
+      'api::news-room.news-room': ApiNewsRoomNewsRoom;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;

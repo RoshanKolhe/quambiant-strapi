@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_newsroom_hero_sections",
+  "info": {
+    "displayName": "HeroSection"
+  },
+  "options": {},
+  "attributes": {
+    "Heading": {
+      "type": "string"
+    },
+    "SubHeading": {
+      "type": "string"
+    },
+    "Image": {
+      "allowedTypes": [
+        "images",
+        "files"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}
