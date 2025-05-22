@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_homepage_story_cards",
+  "info": {
+    "displayName": "StoryCard"
+  },
+  "options": {},
+  "attributes": {
+    "Image": {
+      "allowedTypes": [
+        "images",
+        "files"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "Title": {
+      "type": "string",
+      "required": true
+    },
+    "SubTitle": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

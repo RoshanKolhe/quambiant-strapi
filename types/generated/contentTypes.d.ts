@@ -398,6 +398,10 @@ export interface ApiHomepageHomepage extends Struct.SingleTypeSchema {
       'api::homepage.homepage'
     > &
       Schema.Attribute.Private;
+    ProjectShowcase: Schema.Attribute.Component<
+      'homepage.project-showcase',
+      false
+    >;
     publishedAt: Schema.Attribute.DateTime;
     Spotlight: Schema.Attribute.Component<'homepage.spotlight', false>;
     StatsSection: Schema.Attribute.Component<'homepage.stats-section', false>;

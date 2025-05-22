@@ -31,6 +31,15 @@
         "images",
         "files"
       ]
+    },
+    "HeroImageMobile": {
+      "allowedTypes": [
+        "images",
+        "files"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
     }
   }
 }

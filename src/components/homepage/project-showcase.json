@@ -1,0 +1,86 @@
+{
+  "collectionName": "components_homepage_project_showcases",
+  "info": {
+    "displayName": "ProjectShowcase"
+  },
+  "options": {},
+  "attributes": {
+    "Heading": {
+      "type": "string"
+    },
+    "SubHeading": {
+      "type": "text",
+      "required": true
+    },
+    "GallaryImage1": {
+      "allowedTypes": [
+        "files",
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "GallaryImage2": {
+      "allowedTypes": [
+        "images",
+        "files"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "GallaryImage3": {
+      "allowedTypes": [
+        "files",
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "GallaryImage4": {
+      "allowedTypes": [
+        "images",
+        "files"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "GallaryTextSection5": {
+      "type": "string",
+      "required": true
+    },
+    "GallarySubTextSection5": {
+      "type": "string"
+    },
+    "GallaryImage6": {
+      "allowedTypes": [
+        "images",
+        "files"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "SpotlightImage": {
+      "allowedTypes": [
+        "images",
+        "files"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "StoryCard": {
+      "displayName": "StoryCard",
+      "type": "component",
+      "repeatable": true,
+      "component": "homepage.story-card"
+    },
+    "StoryCardSliderHeading": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

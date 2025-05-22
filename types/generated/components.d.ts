@@ -116,6 +116,8 @@ export interface HomepageHero extends Struct.ComponentSchema {
     Heading: Schema.Attribute.String & Schema.Attribute.Required;
     HeroImage: Schema.Attribute.Media<'images' | 'files'> &
       Schema.Attribute.Required;
+    HeroImageMobile: Schema.Attribute.Media<'images' | 'files'> &
+      Schema.Attribute.Required;
     SubHeading: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
@@ -132,6 +134,32 @@ export interface HomepageHomeStories extends Struct.ComponentSchema {
       true
     >;
     SubHeading: Schema.Attribute.String;
+  };
+}
+
+export interface HomepageProjectShowcase extends Struct.ComponentSchema {
+  collectionName: 'components_homepage_project_showcases';
+  info: {
+    displayName: 'ProjectShowcase';
+  };
+  attributes: {
+    GallaryImage1: Schema.Attribute.Media<'files' | 'images'> &
+      Schema.Attribute.Required;
+    GallaryImage2: Schema.Attribute.Media<'images' | 'files'> &
+      Schema.Attribute.Required;
+    GallaryImage3: Schema.Attribute.Media<'files' | 'images'> &
+      Schema.Attribute.Required;
+    GallaryImage4: Schema.Attribute.Media<'images' | 'files'> &
+      Schema.Attribute.Required;
+    GallaryImage6: Schema.Attribute.Media<'images' | 'files'>;
+    GallarySubTextSection5: Schema.Attribute.String;
+    GallaryTextSection5: Schema.Attribute.String & Schema.Attribute.Required;
+    Heading: Schema.Attribute.String;
+    SpotlightImage: Schema.Attribute.Media<'images' | 'files'> &
+      Schema.Attribute.Required;
+    StoryCard: Schema.Attribute.Component<'homepage.story-card', true>;
+    StoryCardSliderHeading: Schema.Attribute.String & Schema.Attribute.Required;
+    SubHeading: Schema.Attribute.Text & Schema.Attribute.Required;
   };
 }
 
@@ -215,6 +243,19 @@ export interface HomepageSteps extends Struct.ComponentSchema {
   };
 }
 
+export interface HomepageStoryCard extends Struct.ComponentSchema {
+  collectionName: 'components_homepage_story_cards';
+  info: {
+    displayName: 'StoryCard';
+  };
+  attributes: {
+    Image: Schema.Attribute.Media<'images' | 'files'> &
+      Schema.Attribute.Required;
+    SubTitle: Schema.Attribute.String & Schema.Attribute.Required;
+    Title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 export interface HomepageTags extends Struct.ComponentSchema {
   collectionName: 'components_homepage_tags';
   info: {
@@ -274,11 +315,13 @@ declare module '@strapi/strapi' {
       'homepage.green-building-stats': HomepageGreenBuildingStats;
       'homepage.hero': HomepageHero;
       'homepage.home-stories': HomepageHomeStories;
+      'homepage.project-showcase': HomepageProjectShowcase;
       'homepage.project-steps': HomepageProjectSteps;
       'homepage.projects': HomepageProjects;
       'homepage.spotlight': HomepageSpotlight;
       'homepage.stats-section': HomepageStatsSection;
       'homepage.steps': HomepageSteps;
+      'homepage.story-card': HomepageStoryCard;
       'homepage.tags': HomepageTags;
       'homepage.timeline-section': HomepageTimelineSection;
       'homepage.upcoming-launches': HomepageUpcomingLaunches;
