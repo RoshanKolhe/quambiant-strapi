@@ -114,9 +114,9 @@ export interface HomepageHero extends Struct.ComponentSchema {
     ButtonText: Schema.Attribute.String & Schema.Attribute.Required;
     ButtonUrl: Schema.Attribute.String & Schema.Attribute.Required;
     Heading: Schema.Attribute.String & Schema.Attribute.Required;
-    HeroImage: Schema.Attribute.Media<'images' | 'files'> &
+    HeroImage: Schema.Attribute.Media<'images' | 'files' | 'videos'> &
       Schema.Attribute.Required;
-    HeroImageMobile: Schema.Attribute.Media<'images' | 'files'> &
+    HeroImageMobile: Schema.Attribute.Media<'images' | 'files' | 'videos'> &
       Schema.Attribute.Required;
     SubHeading: Schema.Attribute.String & Schema.Attribute.Required;
   };
