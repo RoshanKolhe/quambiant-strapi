@@ -1,7 +1,8 @@
 {
   "collectionName": "components_common_home_stories_sliders",
   "info": {
-    "displayName": "HomeStoriesSlider"
+    "displayName": "HomeStoriesSlider",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -14,14 +15,14 @@
       "required": true
     },
     "Media": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
       "allowedTypes": [
         "images",
         "files",
         "videos"
-      ],
-      "type": "media",
-      "multiple": false,
-      "required": true
+      ]
     },
     "Name": {
       "type": "string",
@@ -29,6 +30,15 @@
     },
     "State": {
       "type": "string"
+    },
+    "ThumbnaiImage": {
+      "allowedTypes": [
+        "images",
+        "files"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
     }
   }
 }

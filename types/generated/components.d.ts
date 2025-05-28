@@ -40,6 +40,7 @@ export interface CommonContactUs extends Struct.ComponentSchema {
 export interface CommonHomeStoriesSlider extends Struct.ComponentSchema {
   collectionName: 'components_common_home_stories_sliders';
   info: {
+    description: '';
     displayName: 'HomeStoriesSlider';
   };
   attributes: {
@@ -49,6 +50,8 @@ export interface CommonHomeStoriesSlider extends Struct.ComponentSchema {
     Name: Schema.Attribute.String;
     State: Schema.Attribute.String;
     SubHeading: Schema.Attribute.String & Schema.Attribute.Required;
+    ThumbnaiImage: Schema.Attribute.Media<'images' | 'files'> &
+      Schema.Attribute.Required;
   };
 }
 
