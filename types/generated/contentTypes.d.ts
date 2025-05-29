@@ -452,6 +452,7 @@ export interface ApiLeadLead extends Struct.CollectionTypeSchema {
 export interface ApiNewsRoomNewsRoom extends Struct.SingleTypeSchema {
   collectionName: 'news_rooms';
   info: {
+    description: '';
     displayName: 'NewsRoom';
     pluralName: 'news-rooms';
     singularName: 'news-room';
@@ -470,7 +471,37 @@ export interface ApiNewsRoomNewsRoom extends Struct.SingleTypeSchema {
       'api::news-room.news-room'
     > &
       Schema.Attribute.Private;
+    NewsRoomSlider: Schema.Attribute.Component<
+      'newsroom.news-room-slider',
+      true
+    >;
     publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiTagTag extends Struct.CollectionTypeSchema {
+  collectionName: 'tags';
+  info: {
+    displayName: 'Tag';
+    pluralName: 'tags';
+    singularName: 'tag';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::tag.tag'> &
+      Schema.Attribute.Private;
+    Name: Schema.Attribute.String & Schema.Attribute.Required;
+    publishedAt: Schema.Attribute.DateTime;
+    Slug: Schema.Attribute.UID<'Name'> & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -989,6 +1020,7 @@ declare module '@strapi/strapi' {
       'api::homepage.homepage': ApiHomepageHomepage;
       'api::lead.lead': ApiLeadLead;
       'api::news-room.news-room': ApiNewsRoomNewsRoom;
+      'api::tag.tag': ApiTagTag;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;

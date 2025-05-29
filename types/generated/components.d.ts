@@ -306,6 +306,23 @@ export interface NewsroomHeroSection extends Struct.ComponentSchema {
   };
 }
 
+export interface NewsroomNewsRoomSlider extends Struct.ComponentSchema {
+  collectionName: 'components_newsroom_news_room_sliders';
+  info: {
+    description: '';
+    displayName: 'NewsRoomSlider';
+  };
+  attributes: {
+    ButtonLink: Schema.Attribute.String & Schema.Attribute.Required;
+    ButtonText: Schema.Attribute.String & Schema.Attribute.Required;
+    Heading: Schema.Attribute.String & Schema.Attribute.Required;
+    Image: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    ReadTime: Schema.Attribute.String & Schema.Attribute.Required;
+    SubHeading: Schema.Attribute.String;
+    Tags: Schema.Attribute.Component<'homepage.tags', true>;
+  };
+}
+
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
@@ -329,6 +346,7 @@ declare module '@strapi/strapi' {
       'homepage.timeline-section': HomepageTimelineSection;
       'homepage.upcoming-launches': HomepageUpcomingLaunches;
       'newsroom.hero-section': NewsroomHeroSection;
+      'newsroom.news-room-slider': NewsroomNewsRoomSlider;
     }
   }
 }

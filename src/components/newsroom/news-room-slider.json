@@ -1,0 +1,42 @@
+{
+  "collectionName": "components_newsroom_news_room_sliders",
+  "info": {
+    "displayName": "NewsRoomSlider",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "Heading": {
+      "type": "string",
+      "required": true
+    },
+    "SubHeading": {
+      "type": "string"
+    },
+    "ReadTime": {
+      "type": "string",
+      "required": true
+    },
+    "ButtonText": {
+      "type": "string",
+      "required": true
+    },
+    "ButtonLink": {
+      "type": "string",
+      "required": true
+    },
+    "Tags": {
+      "type": "component",
+      "repeatable": true,
+      "component": "homepage.tags"
+    }
+  }
+}
