@@ -28,6 +28,10 @@
     "phone": {
       "type": "string",
       "required": true
+    },
+    "message": {
+      "type": "text",
+      "required": true
     }
   }
 }

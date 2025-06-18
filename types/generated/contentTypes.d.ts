@@ -384,19 +384,19 @@ export interface ApiEnquiryEnquiry extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    Email: Schema.Attribute.Email & Schema.Attribute.Required;
+    email: Schema.Attribute.Email & Schema.Attribute.Required;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::enquiry.enquiry'
     > &
       Schema.Attribute.Private;
-    Message: Schema.Attribute.Text & Schema.Attribute.Required;
-    Name: Schema.Attribute.String & Schema.Attribute.Required;
-    PhoneNumber: Schema.Attribute.Text & Schema.Attribute.Required;
-    ProjectOfInterest: Schema.Attribute.String;
+    message: Schema.Attribute.Text & Schema.Attribute.Required;
+    name: Schema.Attribute.String & Schema.Attribute.Required;
+    phoneNumber: Schema.Attribute.Text & Schema.Attribute.Required;
+    projectOfInterest: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
-    TermsAccepted: Schema.Attribute.Boolean & Schema.Attribute.Required;
+    termsAccepted: Schema.Attribute.Boolean & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -473,6 +473,7 @@ export interface ApiLeadLead extends Struct.CollectionTypeSchema {
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::lead.lead'> &
       Schema.Attribute.Private;
     location: Schema.Attribute.String;
+    message: Schema.Attribute.Text & Schema.Attribute.Required;
     name: Schema.Attribute.String & Schema.Attribute.Required;
     phone: Schema.Attribute.String & Schema.Attribute.Required;
     publishedAt: Schema.Attribute.DateTime;

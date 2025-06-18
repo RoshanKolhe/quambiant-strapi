@@ -11,26 +11,26 @@
     "draftAndPublish": true
   },
   "attributes": {
-    "Name": {
+    "name": {
       "type": "string",
       "required": true
     },
-    "Email": {
+    "email": {
       "type": "email",
       "required": true
     },
-    "PhoneNumber": {
+    "phoneNumber": {
       "type": "text",
       "required": true
     },
-    "ProjectOfInterest": {
+    "projectOfInterest": {
       "type": "string"
     },
-    "TermsAccepted": {
+    "termsAccepted": {
       "type": "boolean",
       "required": true
     },
-    "Message": {
+    "message": {
       "type": "text",
       "required": true
     }
