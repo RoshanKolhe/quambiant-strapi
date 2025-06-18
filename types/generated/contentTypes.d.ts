@@ -394,6 +394,7 @@ export interface ApiEnquiryEnquiry extends Struct.CollectionTypeSchema {
     message: Schema.Attribute.Text & Schema.Attribute.Required;
     name: Schema.Attribute.String & Schema.Attribute.Required;
     phoneNumber: Schema.Attribute.Text & Schema.Attribute.Required;
+    projectName: Schema.Attribute.String;
     projectOfInterest: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     termsAccepted: Schema.Attribute.Boolean & Schema.Attribute.Required;
