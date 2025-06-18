@@ -6,7 +6,7 @@ module.exports = {
 
     try {
       const emailConfig = {
-        to: "priteshbavaskar@gmail.com",
+        to: "sales@quambiant.com",
         from: "wa@quambiant.com",
         subject: `New Enquiry from ${result.name || "Website"}`,
         html: `
