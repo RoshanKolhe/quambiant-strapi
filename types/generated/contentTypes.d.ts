@@ -391,7 +391,7 @@ export interface ApiEnquiryEnquiry extends Struct.CollectionTypeSchema {
       'api::enquiry.enquiry'
     > &
       Schema.Attribute.Private;
-    message: Schema.Attribute.Text;
+    message: Schema.Attribute.Text & Schema.Attribute.Required;
     name: Schema.Attribute.String & Schema.Attribute.Required;
     phoneNumber: Schema.Attribute.Text & Schema.Attribute.Required;
     projectName: Schema.Attribute.String;
@@ -474,7 +474,7 @@ export interface ApiLeadLead extends Struct.CollectionTypeSchema {
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::lead.lead'> &
       Schema.Attribute.Private;
     location: Schema.Attribute.String;
-    message: Schema.Attribute.Text & Schema.Attribute.Required;
+    message: Schema.Attribute.Text;
     name: Schema.Attribute.String & Schema.Attribute.Required;
     phone: Schema.Attribute.String & Schema.Attribute.Required;
     publishedAt: Schema.Attribute.DateTime;
