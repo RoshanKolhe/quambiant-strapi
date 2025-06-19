@@ -32,7 +32,7 @@
     },
     "message": {
       "type": "text",
-      "required": true
+      "required": false
     },
     "projectName": {
       "type": "string"
