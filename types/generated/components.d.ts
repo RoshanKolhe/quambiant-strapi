@@ -294,6 +294,102 @@ export interface HomepageUpcomingLaunches extends Struct.ComponentSchema {
   };
 }
 
+export interface InvestorLoungeCeoMessage extends Struct.ComponentSchema {
+  collectionName: 'components_investor_lounge_ceo_messages';
+  info: {
+    displayName: 'CeoMessage';
+  };
+  attributes: {
+    AuthorName: Schema.Attribute.String & Schema.Attribute.Required;
+    AuthorTitle: Schema.Attribute.String & Schema.Attribute.Required;
+    AvatarImage: Schema.Attribute.Media<'images' | 'files'> &
+      Schema.Attribute.Required;
+    Content: Schema.Attribute.Blocks & Schema.Attribute.Required;
+    Date: Schema.Attribute.Date & Schema.Attribute.Required;
+    Title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface InvestorLoungeCommunication extends Struct.ComponentSchema {
+  collectionName: 'components_investor_lounge_communications';
+  info: {
+    description: '';
+    displayName: 'Communication';
+  };
+  attributes: {
+    CeoMessage: Schema.Attribute.Component<
+      'investor-lounge.ceo-message',
+      false
+    >;
+    Heading: Schema.Attribute.String & Schema.Attribute.Required;
+    MarketUpdate: Schema.Attribute.Component<
+      'investor-lounge.ceo-message',
+      false
+    >;
+    Strategy: Schema.Attribute.Component<'investor-lounge.ceo-message', false>;
+    SubHeading: Schema.Attribute.Text;
+  };
+}
+
+export interface InvestorLoungeCompanyProfile extends Struct.ComponentSchema {
+  collectionName: 'components_investor_lounge_company_profiles';
+  info: {
+    description: '';
+    displayName: 'CompanyProfile';
+  };
+  attributes: {
+    CompanyStatistics: Schema.Attribute.Component<
+      'investor-lounge.company-statistics',
+      true
+    >;
+    Heading: Schema.Attribute.String & Schema.Attribute.Required;
+    Image: Schema.Attribute.Media<'images' | 'files'> &
+      Schema.Attribute.Required;
+    Profile: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+      Schema.Attribute.Required;
+    SubHeading: Schema.Attribute.Text;
+  };
+}
+
+export interface InvestorLoungeCompanyStatistics
+  extends Struct.ComponentSchema {
+  collectionName: 'components_investor_lounge_company_statistics';
+  info: {
+    displayName: 'CompanyStatistics';
+  };
+  attributes: {
+    LabelStats: Schema.Attribute.String;
+  };
+}
+
+export interface InvestorLoungeConnectWithUs extends Struct.ComponentSchema {
+  collectionName: 'components_investor_lounge_connect_withuses';
+  info: {
+    displayName: 'ConnectWithUs';
+  };
+  attributes: {
+    Email: Schema.Attribute.Email & Schema.Attribute.Required;
+    OfiiceAddress: Schema.Attribute.Text & Schema.Attribute.Required;
+    Phone: Schema.Attribute.BigInteger;
+    RelationHeading: Schema.Attribute.String & Schema.Attribute.Required;
+    RelationSubHeading: Schema.Attribute.Text;
+  };
+}
+
+export interface InvestorLoungeHero extends Struct.ComponentSchema {
+  collectionName: 'components_investor_lounge_heroes';
+  info: {
+    description: '';
+    displayName: 'Hero';
+  };
+  attributes: {
+    Heading: Schema.Attribute.String & Schema.Attribute.Required;
+    HeroImage: Schema.Attribute.Media<'images' | 'files'> &
+      Schema.Attribute.Required;
+    SubHeading: Schema.Attribute.Text;
+  };
+}
+
 export interface NewsroomHeroSection extends Struct.ComponentSchema {
   collectionName: 'components_newsroom_hero_sections';
   info: {
@@ -345,6 +441,12 @@ declare module '@strapi/strapi' {
       'homepage.tags': HomepageTags;
       'homepage.timeline-section': HomepageTimelineSection;
       'homepage.upcoming-launches': HomepageUpcomingLaunches;
+      'investor-lounge.ceo-message': InvestorLoungeCeoMessage;
+      'investor-lounge.communication': InvestorLoungeCommunication;
+      'investor-lounge.company-profile': InvestorLoungeCompanyProfile;
+      'investor-lounge.company-statistics': InvestorLoungeCompanyStatistics;
+      'investor-lounge.connect-with-us': InvestorLoungeConnectWithUs;
+      'investor-lounge.hero': InvestorLoungeHero;
       'newsroom.hero-section': NewsroomHeroSection;
       'newsroom.news-room-slider': NewsroomNewsRoomSlider;
     }

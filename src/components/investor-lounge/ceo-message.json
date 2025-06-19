@@ -1,0 +1,38 @@
+{
+  "collectionName": "components_investor_lounge_ceo_messages",
+  "info": {
+    "displayName": "CeoMessage"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "required": true
+    },
+    "AuthorName": {
+      "type": "string",
+      "required": true
+    },
+    "AuthorTitle": {
+      "type": "string",
+      "required": true
+    },
+    "Date": {
+      "type": "date",
+      "required": true
+    },
+    "Content": {
+      "type": "blocks",
+      "required": true
+    },
+    "AvatarImage": {
+      "allowedTypes": [
+        "images",
+        "files"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    }
+  }
+}

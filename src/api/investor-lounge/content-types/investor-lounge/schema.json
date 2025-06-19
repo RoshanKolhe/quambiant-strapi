@@ -1,0 +1,39 @@
+{
+  "kind": "singleType",
+  "collectionName": "investor_lounges",
+  "info": {
+    "singularName": "investor-lounge",
+    "pluralName": "investor-lounges",
+    "displayName": "InvestorLounge",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Hero": {
+      "displayName": "Hero",
+      "type": "component",
+      "repeatable": false,
+      "component": "investor-lounge.hero"
+    },
+    "Communication": {
+      "displayName": "Communication",
+      "type": "component",
+      "repeatable": false,
+      "component": "investor-lounge.communication"
+    },
+    "ConnectWithUs": {
+      "displayName": "ConnectWithUs",
+      "type": "component",
+      "repeatable": false,
+      "component": "investor-lounge.connect-with-us"
+    },
+    "CompanyProfile": {
+      "displayName": "CompanyProfile",
+      "type": "component",
+      "repeatable": false,
+      "component": "investor-lounge.company-profile"
+    }
+  }
+}

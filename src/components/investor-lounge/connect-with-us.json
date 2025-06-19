@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_investor_lounge_connect_withuses",
+  "info": {
+    "displayName": "ConnectWithUs"
+  },
+  "options": {},
+  "attributes": {
+    "Email": {
+      "type": "email",
+      "required": true
+    },
+    "Phone": {
+      "type": "biginteger"
+    },
+    "OfiiceAddress": {
+      "type": "text",
+      "required": true
+    },
+    "RelationHeading": {
+      "type": "string",
+      "required": true
+    },
+    "RelationSubHeading": {
+      "type": "text"
+    }
+  }
+}

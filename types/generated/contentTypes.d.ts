@@ -454,6 +454,84 @@ export interface ApiHomepageHomepage extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiInvestorLeadInvestorLead
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'investor_leads';
+  info: {
+    displayName: 'InvestorLead';
+    pluralName: 'investor-leads';
+    singularName: 'investor-lead';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    attachment: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    email: Schema.Attribute.Email & Schema.Attribute.Required;
+    firstName: Schema.Attribute.String & Schema.Attribute.Required;
+    lastName: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::investor-lead.investor-lead'
+    > &
+      Schema.Attribute.Private;
+    phoneNumber: Schema.Attribute.BigInteger;
+    publishedAt: Schema.Attribute.DateTime;
+    requirement: Schema.Attribute.Text & Schema.Attribute.Required;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiInvestorLoungeInvestorLounge
+  extends Struct.SingleTypeSchema {
+  collectionName: 'investor_lounges';
+  info: {
+    description: '';
+    displayName: 'InvestorLounge';
+    pluralName: 'investor-lounges';
+    singularName: 'investor-lounge';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Communication: Schema.Attribute.Component<
+      'investor-lounge.communication',
+      false
+    >;
+    CompanyProfile: Schema.Attribute.Component<
+      'investor-lounge.company-profile',
+      false
+    >;
+    ConnectWithUs: Schema.Attribute.Component<
+      'investor-lounge.connect-with-us',
+      false
+    >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    Hero: Schema.Attribute.Component<'investor-lounge.hero', false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::investor-lounge.investor-lounge'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiLeadLead extends Struct.CollectionTypeSchema {
   collectionName: 'leads';
   info: {
@@ -1055,6 +1133,8 @@ declare module '@strapi/strapi' {
       'admin::user': AdminUser;
       'api::enquiry.enquiry': ApiEnquiryEnquiry;
       'api::homepage.homepage': ApiHomepageHomepage;
+      'api::investor-lead.investor-lead': ApiInvestorLeadInvestorLead;
+      'api::investor-lounge.investor-lounge': ApiInvestorLoungeInvestorLounge;
       'api::lead.lead': ApiLeadLead;
       'api::news-room.news-room': ApiNewsRoomNewsRoom;
       'api::tag.tag': ApiTagTag;

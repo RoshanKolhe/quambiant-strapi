@@ -1,0 +1,43 @@
+{
+  "collectionName": "components_investor_lounge_company_profiles",
+  "info": {
+    "displayName": "CompanyProfile",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Heading": {
+      "type": "string",
+      "required": true
+    },
+    "SubHeading": {
+      "type": "text"
+    },
+    "CompanyStatistics": {
+      "displayName": "CompanyStatistics",
+      "type": "component",
+      "repeatable": true,
+      "component": "investor-lounge.company-statistics"
+    },
+    "Profile": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "Image": {
+      "allowedTypes": [
+        "images",
+        "files"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    }
+  }
+}

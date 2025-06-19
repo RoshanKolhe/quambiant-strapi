@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_investor_lounge_communications",
+  "info": {
+    "displayName": "Communication",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Heading": {
+      "type": "string",
+      "required": true
+    },
+    "SubHeading": {
+      "type": "text"
+    },
+    "CeoMessage": {
+      "displayName": "CeoMessage",
+      "type": "component",
+      "repeatable": false,
+      "component": "investor-lounge.ceo-message"
+    },
+    "MarketUpdate": {
+      "type": "component",
+      "repeatable": false,
+      "component": "investor-lounge.ceo-message"
+    },
+    "Strategy": {
+      "type": "component",
+      "repeatable": false,
+      "component": "investor-lounge.ceo-message"
+    }
+  }
+}

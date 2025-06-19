@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "investor_leads",
+  "info": {
+    "singularName": "investor-lead",
+    "pluralName": "investor-leads",
+    "displayName": "InvestorLead"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "firstName": {
+      "type": "string",
+      "required": true
+    },
+    "lastName": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email",
+      "required": true
+    },
+    "phoneNumber": {
+      "type": "biginteger"
+    },
+    "requirement": {
+      "type": "text",
+      "required": true
+    },
+    "attachment": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

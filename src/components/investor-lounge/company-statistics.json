@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_investor_lounge_company_statistics",
+  "info": {
+    "displayName": "CompanyStatistics"
+  },
+  "options": {},
+  "attributes": {
+    "LabelStats": {
+      "type": "string"
+    }
+  }
+}
