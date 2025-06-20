@@ -1,0 +1,27 @@
+{
+  "kind": "singleType",
+  "collectionName": "careers",
+  "info": {
+    "singularName": "career",
+    "pluralName": "careers",
+    "displayName": "Career",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Hero": {
+      "displayName": "Hero",
+      "type": "component",
+      "repeatable": false,
+      "component": "career.hero"
+    },
+    "MissionAndVision": {
+      "displayName": "MissionAndVision",
+      "type": "component",
+      "repeatable": false,
+      "component": "career.mission-and-vision"
+    }
+  }
+}

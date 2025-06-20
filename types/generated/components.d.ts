@@ -1,5 +1,36 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface CareerHero extends Struct.ComponentSchema {
+  collectionName: 'components_career_heroes';
+  info: {
+    displayName: 'Hero';
+  };
+  attributes: {
+    HeroHeading: Schema.Attribute.String & Schema.Attribute.Required;
+    HeroImage: Schema.Attribute.Media<'images' | 'files'> &
+      Schema.Attribute.Required;
+    HeroSubHeading: Schema.Attribute.String;
+  };
+}
+
+export interface CareerMissionAndVision extends Struct.ComponentSchema {
+  collectionName: 'components_career_mission_and_visions';
+  info: {
+    displayName: 'MissionAndVision';
+  };
+  attributes: {
+    Heading: Schema.Attribute.String & Schema.Attribute.Required;
+    OurMissionImage: Schema.Attribute.Media<'images' | 'files'>;
+    OurMissionSubTitle: Schema.Attribute.String;
+    OurMissionTitle: Schema.Attribute.String & Schema.Attribute.Required;
+    OurVisionImage: Schema.Attribute.Media<'images' | 'files'> &
+      Schema.Attribute.Required;
+    OurVisionSubTitle: Schema.Attribute.String;
+    OurVisionTitle: Schema.Attribute.String;
+    SubHeading: Schema.Attribute.String;
+  };
+}
+
 export interface CommonAwards extends Struct.ComponentSchema {
   collectionName: 'components_common_awards';
   info: {
@@ -449,6 +480,8 @@ export interface NewsroomNewsRoomSlider extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'career.hero': CareerHero;
+      'career.mission-and-vision': CareerMissionAndVision;
       'common.awards': CommonAwards;
       'common.awards-slider': CommonAwardsSlider;
       'common.contact-us': CommonContactUs;

@@ -1,0 +1,46 @@
+{
+  "collectionName": "components_career_mission_and_visions",
+  "info": {
+    "displayName": "MissionAndVision"
+  },
+  "options": {},
+  "attributes": {
+    "Heading": {
+      "type": "string",
+      "required": true
+    },
+    "SubHeading": {
+      "type": "string"
+    },
+    "OurMissionImage": {
+      "allowedTypes": [
+        "images",
+        "files"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "OurVisionImage": {
+      "allowedTypes": [
+        "images",
+        "files"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "OurMissionTitle": {
+      "type": "string",
+      "required": true
+    },
+    "OurVisionTitle": {
+      "type": "string"
+    },
+    "OurVisionSubTitle": {
+      "type": "string"
+    },
+    "OurMissionSubTitle": {
+      "type": "string"
+    }
+  }
+}

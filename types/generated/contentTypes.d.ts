@@ -369,6 +369,39 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiCareerCareer extends Struct.SingleTypeSchema {
+  collectionName: 'careers';
+  info: {
+    description: '';
+    displayName: 'Career';
+    pluralName: 'careers';
+    singularName: 'career';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    Hero: Schema.Attribute.Component<'career.hero', false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::career.career'
+    > &
+      Schema.Attribute.Private;
+    MissionAndVision: Schema.Attribute.Component<
+      'career.mission-and-vision',
+      false
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiContactUsContactUs extends Struct.SingleTypeSchema {
   collectionName: 'contact_uses';
   info: {
@@ -1161,6 +1194,7 @@ declare module '@strapi/strapi' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
+      'api::career.career': ApiCareerCareer;
       'api::contact-us.contact-us': ApiContactUsContactUs;
       'api::enquiry.enquiry': ApiEnquiryEnquiry;
       'api::homepage.homepage': ApiHomepageHomepage;

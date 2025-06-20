@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_career_heroes",
+  "info": {
+    "displayName": "Hero"
+  },
+  "options": {},
+  "attributes": {
+    "HeroImage": {
+      "allowedTypes": [
+        "images",
+        "files"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "HeroHeading": {
+      "type": "string",
+      "required": true
+    },
+    "HeroSubHeading": {
+      "type": "string"
+    }
+  }
+}
