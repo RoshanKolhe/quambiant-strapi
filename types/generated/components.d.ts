@@ -71,6 +71,33 @@ export interface CommonSharedSlider extends Struct.ComponentSchema {
   };
 }
 
+export interface ContactUsHero extends Struct.ComponentSchema {
+  collectionName: 'components_contact_us_heroes';
+  info: {
+    description: '';
+    displayName: 'Hero';
+  };
+  attributes: {
+    Heading: Schema.Attribute.String & Schema.Attribute.Required;
+    HeroImage: Schema.Attribute.Media<'images' | 'files'> &
+      Schema.Attribute.Required;
+  };
+}
+
+export interface ContactUsSocial extends Struct.ComponentSchema {
+  collectionName: 'components_contact_us_socials';
+  info: {
+    displayName: 'Social';
+  };
+  attributes: {
+    Email: Schema.Attribute.Email;
+    FaceBook: Schema.Attribute.String & Schema.Attribute.Required;
+    Instagram: Schema.Attribute.String;
+    PhoneNumber: Schema.Attribute.BigInteger;
+    YouTube: Schema.Attribute.String;
+  };
+}
+
 export interface HomepageCard extends Struct.ComponentSchema {
   collectionName: 'components_homepage_cards';
   info: {
@@ -427,6 +454,8 @@ declare module '@strapi/strapi' {
       'common.contact-us': CommonContactUs;
       'common.home-stories-slider': CommonHomeStoriesSlider;
       'common.shared-slider': CommonSharedSlider;
+      'contact-us.hero': ContactUsHero;
+      'contact-us.social': ContactUsSocial;
       'homepage.card': HomepageCard;
       'homepage.green-building-stats': HomepageGreenBuildingStats;
       'homepage.hero': HomepageHero;

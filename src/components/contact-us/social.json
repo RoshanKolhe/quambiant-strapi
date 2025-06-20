@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_contact_us_socials",
+  "info": {
+    "displayName": "Social"
+  },
+  "options": {},
+  "attributes": {
+    "Email": {
+      "type": "email"
+    },
+    "PhoneNumber": {
+      "type": "biginteger"
+    },
+    "FaceBook": {
+      "type": "string",
+      "required": true
+    },
+    "Instagram": {
+      "type": "string"
+    },
+    "YouTube": {
+      "type": "string"
+    }
+  }
+}

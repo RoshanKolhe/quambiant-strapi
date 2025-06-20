@@ -1,0 +1,27 @@
+{
+  "kind": "singleType",
+  "collectionName": "contact_uses",
+  "info": {
+    "singularName": "contact-us",
+    "pluralName": "contact-uses",
+    "displayName": "ContactUs",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Hero": {
+      "displayName": "Hero",
+      "type": "component",
+      "repeatable": false,
+      "component": "contact-us.hero"
+    },
+    "Social": {
+      "displayName": "Social",
+      "type": "component",
+      "repeatable": false,
+      "component": "contact-us.social"
+    }
+  }
+}
