@@ -1,0 +1,60 @@
+{
+  "kind": "collectionType",
+  "collectionName": "career_contacts",
+  "info": {
+    "singularName": "career-contact",
+    "pluralName": "career-contacts",
+    "displayName": "CareerContact",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "firstName": {
+      "type": "string",
+      "required": true
+    },
+    "lastName": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email",
+      "required": true
+    },
+    "phoneNumber": {
+      "type": "biginteger",
+      "required": true
+    },
+    "experience": {
+      "type": "string",
+      "required": true
+    },
+    "resume": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "coverLetter": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "additionalInformation": {
+      "type": "text",
+      "required": false
+    },
+    "desiredRole": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

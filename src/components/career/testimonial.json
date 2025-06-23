@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_career_testimonials",
+  "info": {
+    "displayName": "Testimonial"
+  },
+  "options": {},
+  "attributes": {
+    "Quote": {
+      "type": "string",
+      "required": true
+    },
+    "AuthorName": {
+      "type": "string",
+      "required": true
+    },
+    "AuthorRole": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

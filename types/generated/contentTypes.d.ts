@@ -369,6 +369,46 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiCareerContactCareerContact
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'career_contacts';
+  info: {
+    description: '';
+    displayName: 'CareerContact';
+    pluralName: 'career-contacts';
+    singularName: 'career-contact';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    additionalInformation: Schema.Attribute.Text;
+    coverLetter: Schema.Attribute.Media<'images' | 'files'> &
+      Schema.Attribute.Required;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    desiredRole: Schema.Attribute.String & Schema.Attribute.Required;
+    email: Schema.Attribute.Email & Schema.Attribute.Required;
+    experience: Schema.Attribute.String & Schema.Attribute.Required;
+    firstName: Schema.Attribute.String & Schema.Attribute.Required;
+    lastName: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::career-contact.career-contact'
+    > &
+      Schema.Attribute.Private;
+    phoneNumber: Schema.Attribute.BigInteger & Schema.Attribute.Required;
+    publishedAt: Schema.Attribute.DateTime;
+    resume: Schema.Attribute.Media<'images' | 'files'> &
+      Schema.Attribute.Required;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiCareerCareer extends Struct.SingleTypeSchema {
   collectionName: 'careers';
   info: {
@@ -381,10 +421,12 @@ export interface ApiCareerCareer extends Struct.SingleTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
+    ConnectWithUs: Schema.Attribute.Component<'career.connect-with-us', false>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     Hero: Schema.Attribute.Component<'career.hero', false>;
+    JoinOurTeam: Schema.Attribute.Component<'career.join-our-team', false>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -1194,6 +1236,7 @@ declare module '@strapi/strapi' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
+      'api::career-contact.career-contact': ApiCareerContactCareerContact;
       'api::career.career': ApiCareerCareer;
       'api::contact-us.contact-us': ApiContactUsContactUs;
       'api::enquiry.enquiry': ApiEnquiryEnquiry;

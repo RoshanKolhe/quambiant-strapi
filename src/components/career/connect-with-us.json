@@ -1,0 +1,50 @@
+{
+  "collectionName": "components_career_connect_withuses",
+  "info": {
+    "displayName": "ConnectWithUs"
+  },
+  "options": {},
+  "attributes": {
+    "Heading": {
+      "type": "string",
+      "required": true
+    },
+    "SubHeading": {
+      "type": "string"
+    },
+    "CardTitle": {
+      "type": "string",
+      "required": true
+    },
+    "CardSubtitle": {
+      "type": "string"
+    },
+    "BenefitOneTitle": {
+      "type": "string",
+      "required": true
+    },
+    "BenefitOneSubTitle": {
+      "type": "string"
+    },
+    "BenefitTwoSubTitle": {
+      "type": "string"
+    },
+    "BenefitTwoTitle": {
+      "type": "string",
+      "required": true
+    },
+    "BenefitThreeTitle": {
+      "type": "string",
+      "required": true
+    },
+    "BenefitThreeSubTitle": {
+      "type": "string"
+    },
+    "Testimonial": {
+      "displayName": "Testimonial",
+      "type": "component",
+      "repeatable": false,
+      "component": "career.testimonial"
+    }
+  }
+}

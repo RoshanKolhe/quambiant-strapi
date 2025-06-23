@@ -22,6 +22,18 @@
       "type": "component",
       "repeatable": false,
       "component": "career.mission-and-vision"
+    },
+    "JoinOurTeam": {
+      "displayName": "JoinOurTeam",
+      "type": "component",
+      "repeatable": false,
+      "component": "career.join-our-team"
+    },
+    "ConnectWithUs": {
+      "displayName": "ConnectWithUs",
+      "type": "component",
+      "repeatable": false,
+      "component": "career.connect-with-us"
     }
   }
 }

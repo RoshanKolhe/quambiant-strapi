@@ -1,0 +1,48 @@
+{
+  "collectionName": "components_career_join_our_teams",
+  "info": {
+    "displayName": "JoinOurTeam"
+  },
+  "options": {},
+  "attributes": {
+    "Heading": {
+      "type": "string",
+      "required": true
+    },
+    "SubHeading": {
+      "type": "string"
+    },
+    "CardOneTitle": {
+      "type": "string",
+      "required": true
+    },
+    "CardOneSubTitle": {
+      "type": "string",
+      "required": true
+    },
+    "CardTwoTitle": {
+      "type": "string",
+      "required": true
+    },
+    "CardTwoSubTitle": {
+      "type": "string",
+      "required": true
+    },
+    "CardThreeTitle": {
+      "type": "string",
+      "required": true
+    },
+    "CardThreeSubTitle": {
+      "type": "string",
+      "required": true
+    },
+    "CardFourTitle": {
+      "type": "string",
+      "required": true
+    },
+    "CardFourSubTitle": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

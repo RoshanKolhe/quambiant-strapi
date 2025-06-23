@@ -1,5 +1,25 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface CareerConnectWithUs extends Struct.ComponentSchema {
+  collectionName: 'components_career_connect_withuses';
+  info: {
+    displayName: 'ConnectWithUs';
+  };
+  attributes: {
+    BenefitOneSubTitle: Schema.Attribute.String;
+    BenefitOneTitle: Schema.Attribute.String & Schema.Attribute.Required;
+    BenefitThreeSubTitle: Schema.Attribute.String;
+    BenefitThreeTitle: Schema.Attribute.String & Schema.Attribute.Required;
+    BenefitTwoSubTitle: Schema.Attribute.String;
+    BenefitTwoTitle: Schema.Attribute.String & Schema.Attribute.Required;
+    CardSubtitle: Schema.Attribute.String;
+    CardTitle: Schema.Attribute.String & Schema.Attribute.Required;
+    Heading: Schema.Attribute.String & Schema.Attribute.Required;
+    SubHeading: Schema.Attribute.String;
+    Testimonial: Schema.Attribute.Component<'career.testimonial', false>;
+  };
+}
+
 export interface CareerHero extends Struct.ComponentSchema {
   collectionName: 'components_career_heroes';
   info: {
@@ -10,6 +30,25 @@ export interface CareerHero extends Struct.ComponentSchema {
     HeroImage: Schema.Attribute.Media<'images' | 'files'> &
       Schema.Attribute.Required;
     HeroSubHeading: Schema.Attribute.String;
+  };
+}
+
+export interface CareerJoinOurTeam extends Struct.ComponentSchema {
+  collectionName: 'components_career_join_our_teams';
+  info: {
+    displayName: 'JoinOurTeam';
+  };
+  attributes: {
+    CardFourSubTitle: Schema.Attribute.String & Schema.Attribute.Required;
+    CardFourTitle: Schema.Attribute.String & Schema.Attribute.Required;
+    CardOneSubTitle: Schema.Attribute.String & Schema.Attribute.Required;
+    CardOneTitle: Schema.Attribute.String & Schema.Attribute.Required;
+    CardThreeSubTitle: Schema.Attribute.String & Schema.Attribute.Required;
+    CardThreeTitle: Schema.Attribute.String & Schema.Attribute.Required;
+    CardTwoSubTitle: Schema.Attribute.String & Schema.Attribute.Required;
+    CardTwoTitle: Schema.Attribute.String & Schema.Attribute.Required;
+    Heading: Schema.Attribute.String & Schema.Attribute.Required;
+    SubHeading: Schema.Attribute.String;
   };
 }
 
@@ -28,6 +67,18 @@ export interface CareerMissionAndVision extends Struct.ComponentSchema {
     OurVisionSubTitle: Schema.Attribute.String;
     OurVisionTitle: Schema.Attribute.String;
     SubHeading: Schema.Attribute.String;
+  };
+}
+
+export interface CareerTestimonial extends Struct.ComponentSchema {
+  collectionName: 'components_career_testimonials';
+  info: {
+    displayName: 'Testimonial';
+  };
+  attributes: {
+    AuthorName: Schema.Attribute.String & Schema.Attribute.Required;
+    AuthorRole: Schema.Attribute.String & Schema.Attribute.Required;
+    Quote: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
 
@@ -480,8 +531,11 @@ export interface NewsroomNewsRoomSlider extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'career.connect-with-us': CareerConnectWithUs;
       'career.hero': CareerHero;
+      'career.join-our-team': CareerJoinOurTeam;
       'career.mission-and-vision': CareerMissionAndVision;
+      'career.testimonial': CareerTestimonial;
       'common.awards': CommonAwards;
       'common.awards-slider': CommonAwardsSlider;
       'common.contact-us': CommonContactUs;
