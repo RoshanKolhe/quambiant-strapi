@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_csr_csr_philosophies",
+  "info": {
+    "displayName": "CsrPhilosophy"
+  },
+  "options": {},
+  "attributes": {
+    "Heading": {
+      "type": "string",
+      "required": true
+    },
+    "SubHeading": {
+      "type": "string"
+    },
+    "Slider": {
+      "displayName": "Slider",
+      "type": "component",
+      "repeatable": true,
+      "component": "csr.slider"
+    }
+  }
+}

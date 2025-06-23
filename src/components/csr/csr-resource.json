@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_csr_csr_resources",
+  "info": {
+    "displayName": "CsrResource"
+  },
+  "options": {},
+  "attributes": {
+    "Heading": {
+      "type": "string",
+      "required": true
+    },
+    "SubHeading": {
+      "type": "string"
+    },
+    "Resources": {
+      "displayName": "Resources",
+      "type": "component",
+      "repeatable": true,
+      "component": "csr.resources"
+    }
+  }
+}

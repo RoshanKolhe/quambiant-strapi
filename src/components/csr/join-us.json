@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_csr_joinuses",
+  "info": {
+    "displayName": "JoinUs"
+  },
+  "options": {},
+  "attributes": {
+    "Heading": {
+      "type": "string",
+      "required": true
+    },
+    "SubHeading": {
+      "type": "string"
+    }
+  }
+}

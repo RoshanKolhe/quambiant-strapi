@@ -180,6 +180,134 @@ export interface ContactUsSocial extends Struct.ComponentSchema {
   };
 }
 
+export interface CsrCsrInitiatives extends Struct.ComponentSchema {
+  collectionName: 'components_csr_csr_initiatives';
+  info: {
+    displayName: 'CsrInitiatives';
+  };
+  attributes: {
+    Heading: Schema.Attribute.String & Schema.Attribute.Required;
+    Initiatives: Schema.Attribute.Component<'csr.initiatives', true>;
+    SubHeading: Schema.Attribute.String;
+  };
+}
+
+export interface CsrCsrPhilosophy extends Struct.ComponentSchema {
+  collectionName: 'components_csr_csr_philosophies';
+  info: {
+    displayName: 'CsrPhilosophy';
+  };
+  attributes: {
+    Heading: Schema.Attribute.String & Schema.Attribute.Required;
+    Slider: Schema.Attribute.Component<'csr.slider', true>;
+    SubHeading: Schema.Attribute.String;
+  };
+}
+
+export interface CsrCsrResource extends Struct.ComponentSchema {
+  collectionName: 'components_csr_csr_resources';
+  info: {
+    displayName: 'CsrResource';
+  };
+  attributes: {
+    Heading: Schema.Attribute.String & Schema.Attribute.Required;
+    Resources: Schema.Attribute.Component<'csr.resources', true>;
+    SubHeading: Schema.Attribute.String;
+  };
+}
+
+export interface CsrEvents extends Struct.ComponentSchema {
+  collectionName: 'components_csr_events';
+  info: {
+    displayName: 'Events';
+  };
+  attributes: {
+    date: Schema.Attribute.Date & Schema.Attribute.Required;
+    Image: Schema.Attribute.Media<'images' | 'files'> &
+      Schema.Attribute.Required;
+    Location: Schema.Attribute.String;
+    SubTitle: Schema.Attribute.String;
+    Title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface CsrHero extends Struct.ComponentSchema {
+  collectionName: 'components_csr_heroes';
+  info: {
+    displayName: 'Hero';
+  };
+  attributes: {
+    Heading: Schema.Attribute.String & Schema.Attribute.Required;
+    Image: Schema.Attribute.Media<'images' | 'files'> &
+      Schema.Attribute.Required;
+    SubHeading: Schema.Attribute.String;
+  };
+}
+
+export interface CsrInitiatives extends Struct.ComponentSchema {
+  collectionName: 'components_csr_initiatives';
+  info: {
+    displayName: 'Initiatives';
+  };
+  attributes: {
+    date: Schema.Attribute.Date & Schema.Attribute.Required;
+    Image: Schema.Attribute.Media<'images' | 'files'> &
+      Schema.Attribute.Required;
+    Location: Schema.Attribute.String;
+    SubTitle: Schema.Attribute.String;
+    Title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface CsrJoinUs extends Struct.ComponentSchema {
+  collectionName: 'components_csr_joinuses';
+  info: {
+    displayName: 'JoinUs';
+  };
+  attributes: {
+    Heading: Schema.Attribute.String & Schema.Attribute.Required;
+    SubHeading: Schema.Attribute.String;
+  };
+}
+
+export interface CsrResources extends Struct.ComponentSchema {
+  collectionName: 'components_csr_resources';
+  info: {
+    displayName: 'Resources';
+  };
+  attributes: {
+    File: Schema.Attribute.Media<'images' | 'files'> &
+      Schema.Attribute.Required;
+    SubTitle: Schema.Attribute.String;
+    Title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface CsrSlider extends Struct.ComponentSchema {
+  collectionName: 'components_csr_sliders';
+  info: {
+    displayName: 'Slider';
+  };
+  attributes: {
+    Image: Schema.Attribute.Media<'images' | 'files'> &
+      Schema.Attribute.Required;
+    SubTitle: Schema.Attribute.String;
+    Title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface CsrUpcomingCsrEvents extends Struct.ComponentSchema {
+  collectionName: 'components_csr_upcoming_csr_events';
+  info: {
+    displayName: 'UpcomingCsrEvents';
+  };
+  attributes: {
+    Events: Schema.Attribute.Component<'csr.events', true>;
+    Heading: Schema.Attribute.String & Schema.Attribute.Required;
+    SubHeading: Schema.Attribute.String;
+  };
+}
+
 export interface HomepageCard extends Struct.ComponentSchema {
   collectionName: 'components_homepage_cards';
   info: {
@@ -543,6 +671,16 @@ declare module '@strapi/strapi' {
       'common.shared-slider': CommonSharedSlider;
       'contact-us.hero': ContactUsHero;
       'contact-us.social': ContactUsSocial;
+      'csr.csr-initiatives': CsrCsrInitiatives;
+      'csr.csr-philosophy': CsrCsrPhilosophy;
+      'csr.csr-resource': CsrCsrResource;
+      'csr.events': CsrEvents;
+      'csr.hero': CsrHero;
+      'csr.initiatives': CsrInitiatives;
+      'csr.join-us': CsrJoinUs;
+      'csr.resources': CsrResources;
+      'csr.slider': CsrSlider;
+      'csr.upcoming-csr-events': CsrUpcomingCsrEvents;
       'homepage.card': HomepageCard;
       'homepage.green-building-stats': HomepageGreenBuildingStats;
       'homepage.hero': HomepageHero;

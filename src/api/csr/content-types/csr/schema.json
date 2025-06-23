@@ -1,0 +1,51 @@
+{
+  "kind": "singleType",
+  "collectionName": "csrs",
+  "info": {
+    "singularName": "csr",
+    "pluralName": "csrs",
+    "displayName": "CSR",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Hero": {
+      "displayName": "Hero",
+      "type": "component",
+      "repeatable": false,
+      "component": "csr.hero"
+    },
+    "CsrPhilosophy": {
+      "displayName": "CsrPhilosophy",
+      "type": "component",
+      "repeatable": false,
+      "component": "csr.csr-philosophy"
+    },
+    "UpcomingCsrEvents": {
+      "displayName": "UpcomingCsrEvents",
+      "type": "component",
+      "repeatable": false,
+      "component": "csr.upcoming-csr-events"
+    },
+    "CsrInitiatives": {
+      "displayName": "CsrInitiatives",
+      "type": "component",
+      "repeatable": false,
+      "component": "csr.csr-initiatives"
+    },
+    "CsrResource": {
+      "displayName": "CsrResource",
+      "type": "component",
+      "repeatable": false,
+      "component": "csr.csr-resource"
+    },
+    "JoinUs": {
+      "displayName": "JoinUs",
+      "type": "component",
+      "repeatable": false,
+      "component": "csr.join-us"
+    }
+  }
+}

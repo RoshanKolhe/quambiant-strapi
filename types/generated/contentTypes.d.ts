@@ -474,6 +474,40 @@ export interface ApiContactUsContactUs extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiCsrCsr extends Struct.SingleTypeSchema {
+  collectionName: 'csrs';
+  info: {
+    description: '';
+    displayName: 'CSR';
+    pluralName: 'csrs';
+    singularName: 'csr';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    CsrInitiatives: Schema.Attribute.Component<'csr.csr-initiatives', false>;
+    CsrPhilosophy: Schema.Attribute.Component<'csr.csr-philosophy', false>;
+    CsrResource: Schema.Attribute.Component<'csr.csr-resource', false>;
+    Hero: Schema.Attribute.Component<'csr.hero', false>;
+    JoinUs: Schema.Attribute.Component<'csr.join-us', false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::csr.csr'> &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    UpcomingCsrEvents: Schema.Attribute.Component<
+      'csr.upcoming-csr-events',
+      false
+    >;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiEnquiryEnquiry extends Struct.CollectionTypeSchema {
   collectionName: 'enquiries';
   info: {
@@ -1239,6 +1273,7 @@ declare module '@strapi/strapi' {
       'api::career-contact.career-contact': ApiCareerContactCareerContact;
       'api::career.career': ApiCareerCareer;
       'api::contact-us.contact-us': ApiContactUsContactUs;
+      'api::csr.csr': ApiCsrCsr;
       'api::enquiry.enquiry': ApiEnquiryEnquiry;
       'api::homepage.homepage': ApiHomepageHomepage;
       'api::investor-lead.investor-lead': ApiInvestorLeadInvestorLead;

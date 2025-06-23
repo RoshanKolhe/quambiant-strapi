@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_csr_csr_initiatives",
+  "info": {
+    "displayName": "CsrInitiatives"
+  },
+  "options": {},
+  "attributes": {
+    "Heading": {
+      "type": "string",
+      "required": true
+    },
+    "SubHeading": {
+      "type": "string"
+    },
+    "Initiatives": {
+      "displayName": "Initiatives",
+      "type": "component",
+      "repeatable": true,
+      "component": "csr.initiatives"
+    }
+  }
+}
