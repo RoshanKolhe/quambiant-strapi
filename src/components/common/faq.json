@@ -1,13 +1,11 @@
 {
   "collectionName": "components_common_faqs",
   "info": {
-    "displayName": "Faq"
+    "displayName": "Faq",
+    "description": ""
   },
   "options": {},
   "attributes": {
-    "Headi": {
-      "type": "string"
-    },
     "Heading": {
       "type": "string",
       "required": true
@@ -16,13 +14,13 @@
       "type": "string"
     },
     "Image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
       "allowedTypes": [
         "images",
         "files"
-      ],
-      "type": "media",
-      "multiple": false,
-      "required": true
+      ]
     },
     "ButtonText": {
       "type": "string",

@@ -122,12 +122,12 @@ export interface CommonContactUs extends Struct.ComponentSchema {
 export interface CommonFaq extends Struct.ComponentSchema {
   collectionName: 'components_common_faqs';
   info: {
+    description: '';
     displayName: 'Faq';
   };
   attributes: {
     ButtonLink: Schema.Attribute.String & Schema.Attribute.Required;
     ButtonText: Schema.Attribute.String & Schema.Attribute.Required;
-    Headi: Schema.Attribute.String;
     Heading: Schema.Attribute.String & Schema.Attribute.Required;
     Image: Schema.Attribute.Media<'images' | 'files'> &
       Schema.Attribute.Required;

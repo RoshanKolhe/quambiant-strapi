@@ -383,8 +383,7 @@ export interface ApiCareerContactCareerContact
   };
   attributes: {
     additionalInformation: Schema.Attribute.Text;
-    coverLetter: Schema.Attribute.Media<'images' | 'files'> &
-      Schema.Attribute.Required;
+    coverLetter: Schema.Attribute.Media<'images' | 'files'>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
