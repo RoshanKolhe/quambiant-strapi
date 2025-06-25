@@ -32,8 +32,6 @@ export interface AboutUsPillars extends Struct.ComponentSchema {
     displayName: 'Pillars';
   };
   attributes: {
-    Image: Schema.Attribute.Media<'images' | 'files'> &
-      Schema.Attribute.Required;
     Letter: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.SetMinMaxLength<{
@@ -46,10 +44,13 @@ export interface AboutUsPillars extends Struct.ComponentSchema {
 export interface AboutUsPillarsSection extends Struct.ComponentSchema {
   collectionName: 'components_about_us_pillars_sections';
   info: {
+    description: '';
     displayName: 'PillarsSection';
   };
   attributes: {
     Heading: Schema.Attribute.String & Schema.Attribute.Required;
+    Image: Schema.Attribute.Media<'images' | 'files'> &
+      Schema.Attribute.Required;
     Pillars: Schema.Attribute.Component<'about-us.pillars', true>;
     SubHeading: Schema.Attribute.String;
   };
