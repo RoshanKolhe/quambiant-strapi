@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_about_us_pillars_sections",
+  "info": {
+    "displayName": "PillarsSection"
+  },
+  "options": {},
+  "attributes": {
+    "Heading": {
+      "type": "string",
+      "required": true
+    },
+    "SubHeading": {
+      "type": "string"
+    },
+    "Pillars": {
+      "displayName": "Pillars",
+      "type": "component",
+      "repeatable": true,
+      "component": "about-us.pillars"
+    }
+  }
+}

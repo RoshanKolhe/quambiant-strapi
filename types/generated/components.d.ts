@@ -1,5 +1,98 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface AboutUsJourney extends Struct.ComponentSchema {
+  collectionName: 'components_about_us_journeys';
+  info: {
+    displayName: 'Journey';
+  };
+  attributes: {
+    Description: Schema.Attribute.Text & Schema.Attribute.Required;
+    Image: Schema.Attribute.Media<'images' | 'files'> &
+      Schema.Attribute.Required;
+    Title: Schema.Attribute.String & Schema.Attribute.Required;
+    Year: Schema.Attribute.BigInteger & Schema.Attribute.Required;
+  };
+}
+
+export interface AboutUsJourneyTimeline extends Struct.ComponentSchema {
+  collectionName: 'components_about_us_journey_timelines';
+  info: {
+    displayName: 'JourneyTimeline';
+  };
+  attributes: {
+    Heading: Schema.Attribute.String & Schema.Attribute.Required;
+    Journey: Schema.Attribute.Component<'about-us.journey', true>;
+  };
+}
+
+export interface AboutUsPillars extends Struct.ComponentSchema {
+  collectionName: 'components_about_us_pillars';
+  info: {
+    displayName: 'Pillars';
+  };
+  attributes: {
+    Letter: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 1;
+      }>;
+    Title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface AboutUsPillarsSection extends Struct.ComponentSchema {
+  collectionName: 'components_about_us_pillars_sections';
+  info: {
+    displayName: 'PillarsSection';
+  };
+  attributes: {
+    Heading: Schema.Attribute.String & Schema.Attribute.Required;
+    Pillars: Schema.Attribute.Component<'about-us.pillars', true>;
+    SubHeading: Schema.Attribute.String;
+  };
+}
+
+export interface AboutUsTeamIntroSection extends Struct.ComponentSchema {
+  collectionName: 'components_about_us_team_intro_sections';
+  info: {
+    displayName: 'TeamIntroSection';
+  };
+  attributes: {
+    FeaturedImage: Schema.Attribute.Media<'images' | 'files'> &
+      Schema.Attribute.Required;
+    FeaturedName: Schema.Attribute.String & Schema.Attribute.Required;
+    FeaturedRole: Schema.Attribute.String & Schema.Attribute.Required;
+    Heading: Schema.Attribute.String & Schema.Attribute.Required;
+    LinkedIn: Schema.Attribute.String & Schema.Attribute.Required;
+    SubHeading: Schema.Attribute.String;
+  };
+}
+
+export interface AboutUsTeamMember extends Struct.ComponentSchema {
+  collectionName: 'components_about_us_team_members';
+  info: {
+    displayName: 'TeamMember';
+  };
+  attributes: {
+    LinkedIn: Schema.Attribute.String & Schema.Attribute.Required;
+    MemberImage: Schema.Attribute.Media<'images' | 'files'> &
+      Schema.Attribute.Required;
+    MemberName: Schema.Attribute.String & Schema.Attribute.Required;
+    MemberRole: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface AboutUsWhoWeAreSection extends Struct.ComponentSchema {
+  collectionName: 'components_about_us_who_we_are_sections';
+  info: {
+    displayName: 'WhoWeAreSection';
+  };
+  attributes: {
+    Heading: Schema.Attribute.String & Schema.Attribute.Required;
+    SubHeading: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 export interface CareerConnectWithUs extends Struct.ComponentSchema {
   collectionName: 'components_career_connect_withuses';
   info: {
@@ -690,6 +783,13 @@ export interface NewsroomNewsRoomSlider extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'about-us.journey': AboutUsJourney;
+      'about-us.journey-timeline': AboutUsJourneyTimeline;
+      'about-us.pillars': AboutUsPillars;
+      'about-us.pillars-section': AboutUsPillarsSection;
+      'about-us.team-intro-section': AboutUsTeamIntroSection;
+      'about-us.team-member': AboutUsTeamMember;
+      'about-us.who-we-are-section': AboutUsWhoWeAreSection;
       'career.connect-with-us': CareerConnectWithUs;
       'career.hero': CareerHero;
       'career.join-our-team': CareerJoinOurTeam;

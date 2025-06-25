@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_about_us_who_we_are_sections",
+  "info": {
+    "displayName": "WhoWeAreSection"
+  },
+  "options": {},
+  "attributes": {
+    "Heading": {
+      "type": "string",
+      "required": true
+    },
+    "SubHeading": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

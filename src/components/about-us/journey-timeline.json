@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_about_us_journey_timelines",
+  "info": {
+    "displayName": "JourneyTimeline"
+  },
+  "options": {},
+  "attributes": {
+    "Heading": {
+      "type": "string",
+      "required": true
+    },
+    "Journey": {
+      "displayName": "Journey",
+      "type": "component",
+      "repeatable": true,
+      "component": "about-us.journey"
+    }
+  }
+}

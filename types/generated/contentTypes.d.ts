@@ -369,6 +369,52 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiAboutUsAboutUs extends Struct.SingleTypeSchema {
+  collectionName: 'about_uses';
+  info: {
+    description: '';
+    displayName: 'AboutUs';
+    pluralName: 'about-uses';
+    singularName: 'about-us';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    Hero: Schema.Attribute.Component<'contact-us.hero', false>;
+    JourneyTimeline: Schema.Attribute.Component<
+      'about-us.journey-timeline',
+      false
+    >;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::about-us.about-us'
+    > &
+      Schema.Attribute.Private;
+    PillarsSection: Schema.Attribute.Component<
+      'about-us.pillars-section',
+      false
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    TeamIntroSection: Schema.Attribute.Component<
+      'about-us.team-intro-section',
+      false
+    >;
+    TeamMember: Schema.Attribute.Component<'about-us.team-member', true>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    WhoWeAreSection: Schema.Attribute.Component<
+      'about-us.who-we-are-section',
+      false
+    >;
+  };
+}
+
 export interface ApiCareerContactCareerContact
   extends Struct.CollectionTypeSchema {
   collectionName: 'career_contacts';
@@ -1301,6 +1347,7 @@ declare module '@strapi/strapi' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
+      'api::about-us.about-us': ApiAboutUsAboutUs;
       'api::career-contact.career-contact': ApiCareerContactCareerContact;
       'api::career.career': ApiCareerCareer;
       'api::common-component.common-component': ApiCommonComponentCommonComponent;

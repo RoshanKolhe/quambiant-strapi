@@ -1,0 +1,50 @@
+{
+  "kind": "singleType",
+  "collectionName": "about_uses",
+  "info": {
+    "singularName": "about-us",
+    "pluralName": "about-uses",
+    "displayName": "AboutUs",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Hero": {
+      "type": "component",
+      "repeatable": false,
+      "component": "contact-us.hero"
+    },
+    "WhoWeAreSection": {
+      "displayName": "WhoWeAreSection",
+      "type": "component",
+      "repeatable": false,
+      "component": "about-us.who-we-are-section"
+    },
+    "TeamIntroSection": {
+      "displayName": "TeamIntroSection",
+      "type": "component",
+      "repeatable": false,
+      "component": "about-us.team-intro-section"
+    },
+    "TeamMember": {
+      "displayName": "TeamMember",
+      "type": "component",
+      "repeatable": true,
+      "component": "about-us.team-member"
+    },
+    "PillarsSection": {
+      "displayName": "PillarsSection",
+      "type": "component",
+      "repeatable": false,
+      "component": "about-us.pillars-section"
+    },
+    "JourneyTimeline": {
+      "displayName": "JourneyTimeline",
+      "type": "component",
+      "repeatable": false,
+      "component": "about-us.journey-timeline"
+    }
+  }
+}

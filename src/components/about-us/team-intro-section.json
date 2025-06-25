@@ -1,0 +1,37 @@
+{
+  "collectionName": "components_about_us_team_intro_sections",
+  "info": {
+    "displayName": "TeamIntroSection"
+  },
+  "options": {},
+  "attributes": {
+    "Heading": {
+      "type": "string",
+      "required": true
+    },
+    "SubHeading": {
+      "type": "string"
+    },
+    "FeaturedName": {
+      "type": "string",
+      "required": true
+    },
+    "FeaturedImage": {
+      "allowedTypes": [
+        "images",
+        "files"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "FeaturedRole": {
+      "type": "string",
+      "required": true
+    },
+    "LinkedIn": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

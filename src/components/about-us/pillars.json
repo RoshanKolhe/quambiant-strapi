@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_about_us_pillars",
+  "info": {
+    "displayName": "Pillars"
+  },
+  "options": {},
+  "attributes": {
+    "Letter": {
+      "type": "string",
+      "required": true,
+      "maxLength": 1
+    },
+    "Title": {
+      "type": "string",
+      "required": true
+    }
+  }
+}
