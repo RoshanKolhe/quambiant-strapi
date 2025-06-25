@@ -28,9 +28,12 @@ export interface AboutUsJourneyTimeline extends Struct.ComponentSchema {
 export interface AboutUsPillars extends Struct.ComponentSchema {
   collectionName: 'components_about_us_pillars';
   info: {
+    description: '';
     displayName: 'Pillars';
   };
   attributes: {
+    Image: Schema.Attribute.Media<'images' | 'files'> &
+      Schema.Attribute.Required;
     Letter: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.SetMinMaxLength<{
