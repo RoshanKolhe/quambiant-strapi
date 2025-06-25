@@ -444,6 +444,38 @@ export interface ApiCareerCareer extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiCommonComponentCommonComponent
+  extends Struct.SingleTypeSchema {
+  collectionName: 'common_components';
+  info: {
+    description: '';
+    displayName: 'CommonComponent';
+    pluralName: 'common-components';
+    singularName: 'common-component';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Awards: Schema.Attribute.Component<'common.awards', false>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    Faq: Schema.Attribute.Component<'common.faq', false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::common-component.common-component'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    StatsSection: Schema.Attribute.Component<'homepage.stats-section', false>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiContactUsContactUs extends Struct.SingleTypeSchema {
   collectionName: 'contact_uses';
   info: {
@@ -1272,6 +1304,7 @@ declare module '@strapi/strapi' {
       'admin::user': AdminUser;
       'api::career-contact.career-contact': ApiCareerContactCareerContact;
       'api::career.career': ApiCareerCareer;
+      'api::common-component.common-component': ApiCommonComponentCommonComponent;
       'api::contact-us.contact-us': ApiContactUsContactUs;
       'api::csr.csr': ApiCsrCsr;
       'api::enquiry.enquiry': ApiEnquiryEnquiry;

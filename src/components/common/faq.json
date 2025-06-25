@@ -1,0 +1,42 @@
+{
+  "collectionName": "components_common_faqs",
+  "info": {
+    "displayName": "Faq"
+  },
+  "options": {},
+  "attributes": {
+    "Headi": {
+      "type": "string"
+    },
+    "Heading": {
+      "type": "string",
+      "required": true
+    },
+    "SubHeading": {
+      "type": "string"
+    },
+    "Image": {
+      "allowedTypes": [
+        "images",
+        "files"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "ButtonText": {
+      "type": "string",
+      "required": true
+    },
+    "ButtonLink": {
+      "type": "string",
+      "required": true
+    },
+    "QustionAndAnswers": {
+      "displayName": "QustionAndAnswers",
+      "type": "component",
+      "repeatable": true,
+      "component": "common.qustion-and-answers"
+    }
+  }
+}

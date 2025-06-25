@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_common_qustion_and_answers",
+  "info": {
+    "displayName": "QustionAndAnswers"
+  },
+  "options": {},
+  "attributes": {
+    "Question": {
+      "type": "string",
+      "required": true
+    },
+    "Answer": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

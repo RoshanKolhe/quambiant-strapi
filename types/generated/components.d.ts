@@ -119,6 +119,26 @@ export interface CommonContactUs extends Struct.ComponentSchema {
   };
 }
 
+export interface CommonFaq extends Struct.ComponentSchema {
+  collectionName: 'components_common_faqs';
+  info: {
+    displayName: 'Faq';
+  };
+  attributes: {
+    ButtonLink: Schema.Attribute.String & Schema.Attribute.Required;
+    ButtonText: Schema.Attribute.String & Schema.Attribute.Required;
+    Headi: Schema.Attribute.String;
+    Heading: Schema.Attribute.String & Schema.Attribute.Required;
+    Image: Schema.Attribute.Media<'images' | 'files'> &
+      Schema.Attribute.Required;
+    QustionAndAnswers: Schema.Attribute.Component<
+      'common.qustion-and-answers',
+      true
+    >;
+    SubHeading: Schema.Attribute.String;
+  };
+}
+
 export interface CommonHomeStoriesSlider extends Struct.ComponentSchema {
   collectionName: 'components_common_home_stories_sliders';
   info: {
@@ -134,6 +154,17 @@ export interface CommonHomeStoriesSlider extends Struct.ComponentSchema {
     SubHeading: Schema.Attribute.String & Schema.Attribute.Required;
     ThumbnaiImage: Schema.Attribute.Media<'images' | 'files'> &
       Schema.Attribute.Required;
+  };
+}
+
+export interface CommonQustionAndAnswers extends Struct.ComponentSchema {
+  collectionName: 'components_common_qustion_and_answers';
+  info: {
+    displayName: 'QustionAndAnswers';
+  };
+  attributes: {
+    Answer: Schema.Attribute.Text & Schema.Attribute.Required;
+    Question: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
 
@@ -667,7 +698,9 @@ declare module '@strapi/strapi' {
       'common.awards': CommonAwards;
       'common.awards-slider': CommonAwardsSlider;
       'common.contact-us': CommonContactUs;
+      'common.faq': CommonFaq;
       'common.home-stories-slider': CommonHomeStoriesSlider;
+      'common.qustion-and-answers': CommonQustionAndAnswers;
       'common.shared-slider': CommonSharedSlider;
       'contact-us.hero': ContactUsHero;
       'contact-us.social': ContactUsSocial;

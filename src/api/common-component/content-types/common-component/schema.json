@@ -1,0 +1,31 @@
+{
+  "kind": "singleType",
+  "collectionName": "common_components",
+  "info": {
+    "singularName": "common-component",
+    "pluralName": "common-components",
+    "displayName": "CommonComponent",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Awards": {
+      "type": "component",
+      "repeatable": false,
+      "component": "common.awards"
+    },
+    "Faq": {
+      "displayName": "Faq",
+      "type": "component",
+      "repeatable": false,
+      "component": "common.faq"
+    },
+    "StatsSection": {
+      "type": "component",
+      "repeatable": false,
+      "component": "homepage.stats-section"
+    }
+  }
+}
