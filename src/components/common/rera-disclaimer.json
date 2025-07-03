@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_common_rera_disclaimers",
+  "info": {
+    "displayName": "ReraDisclaimer"
+  },
+  "options": {},
+  "attributes": {
+    "ReraDisclaimer": {
+      "type": "blocks",
+      "required": true
+    }
+  }
+}

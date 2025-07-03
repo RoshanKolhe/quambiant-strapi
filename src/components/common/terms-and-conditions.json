@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_common_terms_and_conditions",
+  "info": {
+    "displayName": "TermsAndConditions",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "TermsAndConditions": {
+      "type": "blocks",
+      "required": true
+    }
+  }
+}

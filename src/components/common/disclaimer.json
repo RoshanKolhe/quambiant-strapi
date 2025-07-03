@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_common_disclaimers",
+  "info": {
+    "displayName": "Disclaimer"
+  },
+  "options": {},
+  "attributes": {
+    "Disclaimer": {
+      "type": "blocks",
+      "required": true
+    }
+  }
+}

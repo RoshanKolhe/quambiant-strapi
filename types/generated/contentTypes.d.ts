@@ -506,6 +506,7 @@ export interface ApiCommonComponentCommonComponent
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    Disclaimer: Schema.Attribute.Component<'common.disclaimer', false>;
     Faq: Schema.Attribute.Component<'common.faq', false>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
@@ -513,8 +514,14 @@ export interface ApiCommonComponentCommonComponent
       'api::common-component.common-component'
     > &
       Schema.Attribute.Private;
+    PrivacyPolicy: Schema.Attribute.Component<'common.privacy-policy', false>;
     publishedAt: Schema.Attribute.DateTime;
+    ReraDisclaimer: Schema.Attribute.Component<'common.rera-disclaimer', false>;
     StatsSection: Schema.Attribute.Component<'homepage.stats-section', false>;
+    TermsAndCondition: Schema.Attribute.Component<
+      'common.terms-and-conditions',
+      false
+    >;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
