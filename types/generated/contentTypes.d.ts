@@ -812,6 +812,41 @@ export interface ApiNewsRoomNewsRoom extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiPostPost extends Struct.CollectionTypeSchema {
+  collectionName: 'posts';
+  info: {
+    description: '';
+    displayName: 'Post';
+    pluralName: 'posts';
+    singularName: 'post';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    authorName: Schema.Attribute.String;
+    content: Schema.Attribute.RichText & Schema.Attribute.Required;
+    coverImage: Schema.Attribute.Media<'images' | 'files'> &
+      Schema.Attribute.Required;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::post.post'> &
+      Schema.Attribute.Private;
+    published_date_time: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    readTime: Schema.Attribute.BigInteger;
+    slug: Schema.Attribute.UID<'title'>;
+    subTitle: Schema.Attribute.Text;
+    tags: Schema.Attribute.Relation<'manyToMany', 'api::tag.tag'>;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiTagTag extends Struct.CollectionTypeSchema {
   collectionName: 'tags';
   info: {
@@ -830,6 +865,7 @@ export interface ApiTagTag extends Struct.CollectionTypeSchema {
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::tag.tag'> &
       Schema.Attribute.Private;
     Name: Schema.Attribute.String & Schema.Attribute.Required;
+    posts: Schema.Attribute.Relation<'manyToMany', 'api::post.post'>;
     publishedAt: Schema.Attribute.DateTime;
     Slug: Schema.Attribute.UID<'Name'> & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
@@ -1359,6 +1395,7 @@ declare module '@strapi/strapi' {
       'api::investor-lounge.investor-lounge': ApiInvestorLoungeInvestorLounge;
       'api::lead.lead': ApiLeadLead;
       'api::news-room.news-room': ApiNewsRoomNewsRoom;
+      'api::post.post': ApiPostPost;
       'api::tag.tag': ApiTagTag;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;

@@ -18,6 +18,12 @@
       "type": "uid",
       "targetField": "Name",
       "required": true
+    },
+    "posts": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::post.post",
+      "mappedBy": "tags"
     }
   }
 }
