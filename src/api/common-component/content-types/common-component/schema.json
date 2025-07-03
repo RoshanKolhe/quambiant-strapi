@@ -26,6 +26,31 @@
       "type": "component",
       "repeatable": false,
       "component": "homepage.stats-section"
+    },
+    "TermsAndCondition": {
+      "displayName": "TermsAndConditions",
+      "type": "component",
+      "repeatable": false,
+      "component": "common.terms-and-conditions",
+      "required": false
+    },
+    "PrivacyPolicy": {
+      "displayName": "PrivacyPolicy",
+      "type": "component",
+      "repeatable": false,
+      "component": "common.privacy-policy"
+    },
+    "Disclaimer": {
+      "displayName": "Disclaimer",
+      "type": "component",
+      "repeatable": false,
+      "component": "common.disclaimer"
+    },
+    "ReraDisclaimer": {
+      "displayName": "ReraDisclaimer",
+      "type": "component",
+      "repeatable": false,
+      "component": "common.rera-disclaimer"
     }
   }
 }

@@ -216,6 +216,16 @@ export interface CommonContactUs extends Struct.ComponentSchema {
   };
 }
 
+export interface CommonDisclaimer extends Struct.ComponentSchema {
+  collectionName: 'components_common_disclaimers';
+  info: {
+    displayName: 'Disclaimer';
+  };
+  attributes: {
+    Disclaimer: Schema.Attribute.Blocks & Schema.Attribute.Required;
+  };
+}
+
 export interface CommonFaq extends Struct.ComponentSchema {
   collectionName: 'components_common_faqs';
   info: {
@@ -254,6 +264,16 @@ export interface CommonHomeStoriesSlider extends Struct.ComponentSchema {
   };
 }
 
+export interface CommonPrivacyPolicy extends Struct.ComponentSchema {
+  collectionName: 'components_common_privacy_policies';
+  info: {
+    displayName: 'PrivacyPolicy';
+  };
+  attributes: {
+    PrivacyPolicy: Schema.Attribute.Blocks & Schema.Attribute.Required;
+  };
+}
+
 export interface CommonQustionAndAnswers extends Struct.ComponentSchema {
   collectionName: 'components_common_qustion_and_answers';
   info: {
@@ -262,6 +282,16 @@ export interface CommonQustionAndAnswers extends Struct.ComponentSchema {
   attributes: {
     Answer: Schema.Attribute.Text & Schema.Attribute.Required;
     Question: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface CommonReraDisclaimer extends Struct.ComponentSchema {
+  collectionName: 'components_common_rera_disclaimers';
+  info: {
+    displayName: 'ReraDisclaimer';
+  };
+  attributes: {
+    ReraDisclaimer: Schema.Attribute.Blocks & Schema.Attribute.Required;
   };
 }
 
@@ -278,6 +308,17 @@ export interface CommonSharedSlider extends Struct.ComponentSchema {
       Schema.Attribute.Required;
     state: Schema.Attribute.String;
     subheading: Schema.Attribute.String;
+  };
+}
+
+export interface CommonTermsAndConditions extends Struct.ComponentSchema {
+  collectionName: 'components_common_terms_and_conditions';
+  info: {
+    description: '';
+    displayName: 'TermsAndConditions';
+  };
+  attributes: {
+    TermsAndConditions: Schema.Attribute.Blocks & Schema.Attribute.Required;
   };
 }
 
@@ -802,10 +843,14 @@ declare module '@strapi/strapi' {
       'common.awards': CommonAwards;
       'common.awards-slider': CommonAwardsSlider;
       'common.contact-us': CommonContactUs;
+      'common.disclaimer': CommonDisclaimer;
       'common.faq': CommonFaq;
       'common.home-stories-slider': CommonHomeStoriesSlider;
+      'common.privacy-policy': CommonPrivacyPolicy;
       'common.qustion-and-answers': CommonQustionAndAnswers;
+      'common.rera-disclaimer': CommonReraDisclaimer;
       'common.shared-slider': CommonSharedSlider;
+      'common.terms-and-conditions': CommonTermsAndConditions;
       'contact-us.hero': ContactUsHero;
       'contact-us.social': ContactUsSocial;
       'csr.csr-initiatives': CsrCsrInitiatives;

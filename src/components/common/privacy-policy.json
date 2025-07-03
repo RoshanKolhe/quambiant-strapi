@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_common_privacy_policies",
+  "info": {
+    "displayName": "PrivacyPolicy"
+  },
+  "options": {},
+  "attributes": {
+    "PrivacyPolicy": {
+      "type": "blocks",
+      "required": true
+    }
+  }
+}
