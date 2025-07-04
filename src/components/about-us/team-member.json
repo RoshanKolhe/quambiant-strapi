@@ -1,7 +1,8 @@
 {
   "collectionName": "components_about_us_team_members",
   "info": {
-    "displayName": "TeamMember"
+    "displayName": "TeamMember",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -18,12 +19,17 @@
       "required": true
     },
     "MemberImage": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
       "allowedTypes": [
         "images",
         "files"
-      ],
-      "type": "media",
-      "multiple": false,
+      ]
+    },
+    "isVisible": {
+      "type": "boolean",
+      "default": false,
       "required": true
     }
   }

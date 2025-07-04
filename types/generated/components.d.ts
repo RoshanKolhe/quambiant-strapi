@@ -59,6 +59,7 @@ export interface AboutUsPillarsSection extends Struct.ComponentSchema {
 export interface AboutUsTeamIntroSection extends Struct.ComponentSchema {
   collectionName: 'components_about_us_team_intro_sections';
   info: {
+    description: '';
     displayName: 'TeamIntroSection';
   };
   attributes: {
@@ -67,6 +68,9 @@ export interface AboutUsTeamIntroSection extends Struct.ComponentSchema {
     FeaturedName: Schema.Attribute.String & Schema.Attribute.Required;
     FeaturedRole: Schema.Attribute.String & Schema.Attribute.Required;
     Heading: Schema.Attribute.String & Schema.Attribute.Required;
+    isVisible: Schema.Attribute.Boolean &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<false>;
     LinkedIn: Schema.Attribute.String & Schema.Attribute.Required;
     SubHeading: Schema.Attribute.String;
   };
@@ -75,9 +79,13 @@ export interface AboutUsTeamIntroSection extends Struct.ComponentSchema {
 export interface AboutUsTeamMember extends Struct.ComponentSchema {
   collectionName: 'components_about_us_team_members';
   info: {
+    description: '';
     displayName: 'TeamMember';
   };
   attributes: {
+    isVisible: Schema.Attribute.Boolean &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<false>;
     LinkedIn: Schema.Attribute.String & Schema.Attribute.Required;
     MemberImage: Schema.Attribute.Media<'images' | 'files'> &
       Schema.Attribute.Required;
