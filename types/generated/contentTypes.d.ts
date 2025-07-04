@@ -608,6 +608,8 @@ export interface ApiEnquiryEnquiry extends Struct.CollectionTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     email: Schema.Attribute.Email & Schema.Attribute.Required;
+    isInvestorLead: Schema.Attribute.Boolean &
+      Schema.Attribute.DefaultTo<false>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -620,7 +622,7 @@ export interface ApiEnquiryEnquiry extends Struct.CollectionTypeSchema {
     projectName: Schema.Attribute.String;
     projectOfInterest: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
-    termsAccepted: Schema.Attribute.Boolean & Schema.Attribute.Required;
+    termsAccepted: Schema.Attribute.Boolean;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

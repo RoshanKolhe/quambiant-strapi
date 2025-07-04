@@ -28,7 +28,7 @@
     },
     "termsAccepted": {
       "type": "boolean",
-      "required": true
+      "required": false
     },
     "message": {
       "type": "text",
@@ -36,6 +36,10 @@
     },
     "projectName": {
       "type": "string"
+    },
+    "isInvestorLead": {
+      "type": "boolean",
+      "default": false
     }
   }
 }
