@@ -83,9 +83,6 @@ export interface AboutUsTeamMember extends Struct.ComponentSchema {
     displayName: 'TeamMember';
   };
   attributes: {
-    isVisible: Schema.Attribute.Boolean &
-      Schema.Attribute.Required &
-      Schema.Attribute.DefaultTo<false>;
     LinkedIn: Schema.Attribute.String & Schema.Attribute.Required;
     MemberImage: Schema.Attribute.Media<'images' | 'files'> &
       Schema.Attribute.Required;

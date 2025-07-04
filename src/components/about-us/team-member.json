@@ -26,11 +26,6 @@
         "images",
         "files"
       ]
-    },
-    "isVisible": {
-      "type": "boolean",
-      "default": false,
-      "required": true
     }
   }
 }
