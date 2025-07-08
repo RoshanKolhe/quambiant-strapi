@@ -968,11 +968,13 @@ export interface ProjectNeighborhood extends Struct.ComponentSchema {
 export interface ProjectPlaces extends Struct.ComponentSchema {
   collectionName: 'components_project_places';
   info: {
+    description: '';
     displayName: 'places';
   };
   attributes: {
     latitude: Schema.Attribute.String & Schema.Attribute.Required;
     longitude: Schema.Attribute.String & Schema.Attribute.Required;
+    place: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
 
