@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_project_calculators",
+  "info": {
+    "displayName": "calculator"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    },
+    "priceInCr": {
+      "required": true,
+      "type": "integer"
+    },
+    "buttonText": {
+      "type": "string",
+      "required": true
+    },
+    "buttonLink": {
+      "type": "string"
+    }
+  }
+}

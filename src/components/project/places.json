@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_project_places",
+  "info": {
+    "displayName": "places"
+  },
+  "options": {},
+  "attributes": {
+    "latitude": {
+      "type": "string",
+      "required": true
+    },
+    "longitude": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,132 @@
+{
+  "kind": "collectionType",
+  "collectionName": "project_listings",
+  "info": {
+    "singularName": "project-listing",
+    "pluralName": "project-listings",
+    "displayName": "ProjectListing",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Hero": {
+      "type": "component",
+      "repeatable": false,
+      "component": "homepage.hero"
+    },
+    "projectName": {
+      "type": "string",
+      "required": true
+    },
+    "projectStatus": {
+      "type": "enumeration",
+      "enum": [
+        "Upcoming",
+        "Ongoing",
+        "Completed"
+      ]
+    },
+    "location": {
+      "type": "string",
+      "required": true
+    },
+    "completionDateLabel": {
+      "type": "string",
+      "required": true
+    },
+    "bannerImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "shortDescription": {
+      "type": "string",
+      "required": true
+    },
+    "keyFeatures": {
+      "displayName": "keyFeatures",
+      "type": "component",
+      "repeatable": true,
+      "component": "project.key-features"
+    },
+    "brochureFile": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "tags": {
+      "type": "component",
+      "repeatable": true,
+      "component": "homepage.tags"
+    },
+    "timeline": {
+      "displayName": "timeline",
+      "type": "component",
+      "repeatable": true,
+      "component": "project.timeline"
+    },
+    "awards": {
+      "displayName": "awards",
+      "type": "component",
+      "repeatable": true,
+      "component": "project.awards"
+    },
+    "faq": {
+      "type": "component",
+      "repeatable": false,
+      "component": "common.faq"
+    },
+    "calculator": {
+      "displayName": "calculator",
+      "type": "component",
+      "repeatable": true,
+      "component": "project.calculator"
+    },
+    "neighborhood": {
+      "displayName": "neighborhood",
+      "type": "component",
+      "repeatable": false,
+      "component": "project.neighborhood"
+    },
+    "projectGallery": {
+      "displayName": "projectGallery",
+      "type": "component",
+      "repeatable": false,
+      "component": "project.project-gallery"
+    },
+    "experience": {
+      "displayName": "experience",
+      "type": "component",
+      "repeatable": false,
+      "component": "project.experience"
+    },
+    "projectLayout": {
+      "displayName": "projectLayout",
+      "type": "component",
+      "repeatable": false,
+      "component": "project.project-layout"
+    },
+    "projectOverviews": {
+      "displayName": " projectOverviews",
+      "type": "component",
+      "repeatable": false,
+      "component": "project.project-overviews"
+    },
+    "amenityCategory": {
+      "displayName": "amenityCategory",
+      "type": "component",
+      "repeatable": false,
+      "component": "project.amenity-category"
+    }
+  }
+}

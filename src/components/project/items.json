@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_project_items",
+  "info": {
+    "displayName": "items"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "thumbnail": {
+      "allowedTypes": [
+        "images",
+        "files"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "sliderImages": {
+      "displayName": "sliderImages",
+      "type": "component",
+      "repeatable": true,
+      "component": "project.slider-images"
+    }
+  }
+}

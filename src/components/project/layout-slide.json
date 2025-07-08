@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_project_layout_slides",
+  "info": {
+    "displayName": "layoutSlide"
+  },
+  "options": {},
+  "attributes": {
+    "svgImage": {
+      "allowedTypes": [
+        "images",
+        "files"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "apartmentType": {
+      "type": "string",
+      "required": true
+    },
+    "carpetArea": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

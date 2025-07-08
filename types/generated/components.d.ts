@@ -525,14 +525,9 @@ export interface HomepageHero extends Struct.ComponentSchema {
     icon: 'house';
   };
   attributes: {
-    ButtonText: Schema.Attribute.String & Schema.Attribute.Required;
-    ButtonUrl: Schema.Attribute.String & Schema.Attribute.Required;
-    Heading: Schema.Attribute.String & Schema.Attribute.Required;
-    HeroImage: Schema.Attribute.Media<'images' | 'files' | 'videos'> &
+    completionStatus: Schema.Attribute.String & Schema.Attribute.Required;
+    heroImage: Schema.Attribute.Media<'images' | 'files' | 'videos'> &
       Schema.Attribute.Required;
-    HeroImageMobile: Schema.Attribute.Media<'images' | 'files' | 'videos'> &
-      Schema.Attribute.Required;
-    SubHeading: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
 
@@ -830,6 +825,210 @@ export interface NewsroomNewsRoomSlider extends Struct.ComponentSchema {
   };
 }
 
+export interface ProjectAmenityCategory extends Struct.ComponentSchema {
+  collectionName: 'components_project_amenity_categories';
+  info: {
+    description: '';
+    displayName: 'amenityCategory';
+  };
+  attributes: {
+    heading: Schema.Attribute.String;
+    items: Schema.Attribute.Component<'project.items', true>;
+    subHeading: Schema.Attribute.String;
+  };
+}
+
+export interface ProjectAwards extends Struct.ComponentSchema {
+  collectionName: 'components_project_awards';
+  info: {
+    displayName: 'awards';
+  };
+  attributes: {
+    label: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface ProjectCalculator extends Struct.ComponentSchema {
+  collectionName: 'components_project_calculators';
+  info: {
+    displayName: 'calculator';
+  };
+  attributes: {
+    buttonLink: Schema.Attribute.String;
+    buttonText: Schema.Attribute.String & Schema.Attribute.Required;
+    label: Schema.Attribute.String;
+    priceInCr: Schema.Attribute.Integer & Schema.Attribute.Required;
+  };
+}
+
+export interface ProjectExperience extends Struct.ComponentSchema {
+  collectionName: 'components_project_experiences';
+  info: {
+    description: '';
+    displayName: 'experience';
+  };
+  attributes: {
+    experienceItem: Schema.Attribute.Component<'project.experience-item', true>;
+    heading: Schema.Attribute.String & Schema.Attribute.Required;
+    subHeading: Schema.Attribute.String;
+    testimonialBy: Schema.Attribute.String & Schema.Attribute.Required;
+    testimonialText: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface ProjectExperienceItem extends Struct.ComponentSchema {
+  collectionName: 'components_project_experience_items';
+  info: {
+    displayName: 'experienceItem';
+  };
+  attributes: {
+    description: Schema.Attribute.String & Schema.Attribute.Required;
+    highlightQuote: Schema.Attribute.String & Schema.Attribute.Required;
+    highlightText: Schema.Attribute.String & Schema.Attribute.Required;
+    image: Schema.Attribute.Media<'images' | 'files'> &
+      Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface ProjectItems extends Struct.ComponentSchema {
+  collectionName: 'components_project_items';
+  info: {
+    displayName: 'items';
+  };
+  attributes: {
+    sliderImages: Schema.Attribute.Component<'project.slider-images', true>;
+    thumbnail: Schema.Attribute.Media<'images' | 'files'> &
+      Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface ProjectKeyFeatures extends Struct.ComponentSchema {
+  collectionName: 'components_project_key_features';
+  info: {
+    displayName: 'keyFeatures';
+  };
+  attributes: {
+    feature: Schema.Attribute.String;
+  };
+}
+
+export interface ProjectLayoutSlide extends Struct.ComponentSchema {
+  collectionName: 'components_project_layout_slides';
+  info: {
+    displayName: 'layoutSlide';
+  };
+  attributes: {
+    apartmentType: Schema.Attribute.String & Schema.Attribute.Required;
+    carpetArea: Schema.Attribute.String & Schema.Attribute.Required;
+    svgImage: Schema.Attribute.Media<'images' | 'files'> &
+      Schema.Attribute.Required;
+  };
+}
+
+export interface ProjectMediaGroups extends Struct.ComponentSchema {
+  collectionName: 'components_project_media_groups';
+  info: {
+    displayName: 'mediaGroups';
+  };
+  attributes: {
+    images: Schema.Attribute.Media<'images' | 'files', true> &
+      Schema.Attribute.Required;
+    label: Schema.Attribute.Enumeration<['Interior', 'Exterior']>;
+  };
+}
+
+export interface ProjectNeighborhood extends Struct.ComponentSchema {
+  collectionName: 'components_project_neighborhoods';
+  info: {
+    displayName: 'neighborhood';
+  };
+  attributes: {
+    places: Schema.Attribute.Component<'project.places', true>;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface ProjectPlaces extends Struct.ComponentSchema {
+  collectionName: 'components_project_places';
+  info: {
+    displayName: 'places';
+  };
+  attributes: {
+    latitude: Schema.Attribute.String & Schema.Attribute.Required;
+    longitude: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface ProjectProjectGallery extends Struct.ComponentSchema {
+  collectionName: 'components_project_project_galleries';
+  info: {
+    displayName: 'projectGallery';
+  };
+  attributes: {
+    heading: Schema.Attribute.String & Schema.Attribute.Required;
+    mediaGroups: Schema.Attribute.Component<'project.media-groups', true>;
+    subHeading: Schema.Attribute.String;
+    video: Schema.Attribute.Media<'files' | 'videos'> &
+      Schema.Attribute.Required;
+  };
+}
+
+export interface ProjectProjectLayout extends Struct.ComponentSchema {
+  collectionName: 'components_project_project_layouts';
+  info: {
+    displayName: 'projectLayout';
+  };
+  attributes: {
+    heading: Schema.Attribute.String & Schema.Attribute.Required;
+    layoutSlide: Schema.Attribute.Component<'project.layout-slide', true>;
+    subHeading: Schema.Attribute.String;
+  };
+}
+
+export interface ProjectProjectOverviews extends Struct.ComponentSchema {
+  collectionName: 'components_project_project_overviews';
+  info: {
+    displayName: ' projectOverviews';
+  };
+  attributes: {
+    apartmentTypes: Schema.Attribute.String & Schema.Attribute.Required;
+    images: Schema.Attribute.Media<'images' | 'files', true>;
+    occupancyRate: Schema.Attribute.String & Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+    totalArea: Schema.Attribute.String & Schema.Attribute.Required;
+    totalFloors: Schema.Attribute.String;
+  };
+}
+
+export interface ProjectSliderImages extends Struct.ComponentSchema {
+  collectionName: 'components_project_slider_images';
+  info: {
+    displayName: 'sliderImages';
+  };
+  attributes: {
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+      Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface ProjectTimeline extends Struct.ComponentSchema {
+  collectionName: 'components_project_timelines';
+  info: {
+    displayName: 'timeline';
+  };
+  attributes: {
+    date: Schema.Attribute.Date;
+    description: Schema.Attribute.String;
+    stageStatus: Schema.Attribute.Enumeration<
+      ['Completed', 'In Progress', 'Pending']
+    >;
+    stageTitle: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
@@ -890,6 +1089,22 @@ declare module '@strapi/strapi' {
       'investor-lounge.hero': InvestorLoungeHero;
       'newsroom.hero-section': NewsroomHeroSection;
       'newsroom.news-room-slider': NewsroomNewsRoomSlider;
+      'project.amenity-category': ProjectAmenityCategory;
+      'project.awards': ProjectAwards;
+      'project.calculator': ProjectCalculator;
+      'project.experience': ProjectExperience;
+      'project.experience-item': ProjectExperienceItem;
+      'project.items': ProjectItems;
+      'project.key-features': ProjectKeyFeatures;
+      'project.layout-slide': ProjectLayoutSlide;
+      'project.media-groups': ProjectMediaGroups;
+      'project.neighborhood': ProjectNeighborhood;
+      'project.places': ProjectPlaces;
+      'project.project-gallery': ProjectProjectGallery;
+      'project.project-layout': ProjectProjectLayout;
+      'project.project-overviews': ProjectProjectOverviews;
+      'project.slider-images': ProjectSliderImages;
+      'project.timeline': ProjectTimeline;
     }
   }
 }

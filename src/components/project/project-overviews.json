@@ -1,0 +1,36 @@
+{
+  "collectionName": "components_project_project_overviews",
+  "info": {
+    "displayName": " projectOverviews"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "totalFloors": {
+      "type": "string"
+    },
+    "totalArea": {
+      "type": "string",
+      "required": true
+    },
+    "apartmentTypes": {
+      "type": "string",
+      "required": true
+    },
+    "occupancyRate": {
+      "type": "string",
+      "required": true
+    },
+    "images": {
+      "allowedTypes": [
+        "images",
+        "files"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}

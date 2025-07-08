@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_project_key_features",
+  "info": {
+    "displayName": "keyFeatures"
+  },
+  "options": {},
+  "attributes": {
+    "feature": {
+      "type": "string"
+    }
+  }
+}

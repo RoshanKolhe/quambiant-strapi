@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_project_amenity_categories",
+  "info": {
+    "displayName": "amenityCategory",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "subHeading": {
+      "type": "string"
+    },
+    "items": {
+      "displayName": "items",
+      "type": "component",
+      "repeatable": true,
+      "component": "project.items"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_project_neighborhoods",
+  "info": {
+    "displayName": "neighborhood"
+  },
+  "options": {},
+  "attributes": {
+    "places": {
+      "displayName": "places",
+      "type": "component",
+      "repeatable": true,
+      "component": "project.places"
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

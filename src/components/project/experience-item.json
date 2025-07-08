@@ -1,0 +1,34 @@
+{
+  "collectionName": "components_project_experience_items",
+  "info": {
+    "displayName": "experienceItem"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "string",
+      "required": true
+    },
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "highlightQuote": {
+      "type": "string",
+      "required": true
+    },
+    "highlightText": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

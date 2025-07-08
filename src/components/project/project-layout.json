@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_project_project_layouts",
+  "info": {
+    "displayName": "projectLayout"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string",
+      "required": true
+    },
+    "subHeading": {
+      "type": "string"
+    },
+    "layoutSlide": {
+      "displayName": "layoutSlide",
+      "type": "component",
+      "repeatable": true,
+      "component": "project.layout-slide"
+    }
+  }
+}

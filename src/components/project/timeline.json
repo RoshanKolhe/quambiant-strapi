@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_project_timelines",
+  "info": {
+    "displayName": "timeline"
+  },
+  "options": {},
+  "attributes": {
+    "stageTitle": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "string"
+    },
+    "stageStatus": {
+      "type": "enumeration",
+      "enum": [
+        "Completed",
+        "In Progress",
+        "Pending"
+      ]
+    },
+    "date": {
+      "type": "date"
+    }
+  }
+}

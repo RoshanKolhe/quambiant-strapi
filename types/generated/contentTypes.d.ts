@@ -856,6 +856,95 @@ export interface ApiPostPost extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiProjectListingProjectListing
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'project_listings';
+  info: {
+    description: '';
+    displayName: 'ProjectListing';
+    pluralName: 'project-listings';
+    singularName: 'project-listing';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    amenityCategory: Schema.Attribute.Component<
+      'project.amenity-category',
+      false
+    >;
+    awards: Schema.Attribute.Component<'project.awards', true>;
+    bannerImage: Schema.Attribute.Media<'images' | 'files'>;
+    brochureFile: Schema.Attribute.Media<'images' | 'files'> &
+      Schema.Attribute.Required;
+    calculator: Schema.Attribute.Component<'project.calculator', true>;
+    completionDateLabel: Schema.Attribute.String & Schema.Attribute.Required;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    experience: Schema.Attribute.Component<'project.experience', false>;
+    faq: Schema.Attribute.Component<'common.faq', false>;
+    Hero: Schema.Attribute.Component<'homepage.hero', false>;
+    keyFeatures: Schema.Attribute.Component<'project.key-features', true>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::project-listing.project-listing'
+    > &
+      Schema.Attribute.Private;
+    location: Schema.Attribute.String & Schema.Attribute.Required;
+    neighborhood: Schema.Attribute.Component<'project.neighborhood', false>;
+    projectGallery: Schema.Attribute.Component<
+      'project.project-gallery',
+      false
+    >;
+    projectLayout: Schema.Attribute.Component<'project.project-layout', false>;
+    projectName: Schema.Attribute.String & Schema.Attribute.Required;
+    projectOverviews: Schema.Attribute.Component<
+      'project.project-overviews',
+      false
+    >;
+    projectStatus: Schema.Attribute.Enumeration<
+      ['Upcoming', 'Ongoing', 'Completed']
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    shortDescription: Schema.Attribute.String & Schema.Attribute.Required;
+    tags: Schema.Attribute.Component<'homepage.tags', true>;
+    timeline: Schema.Attribute.Component<'project.timeline', true>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiProjectProject extends Struct.SingleTypeSchema {
+  collectionName: 'projects';
+  info: {
+    displayName: 'Project';
+    pluralName: 'projects';
+    singularName: 'project';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    Hero: Schema.Attribute.Component<'homepage.hero', false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::project.project'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiTagTag extends Struct.CollectionTypeSchema {
   collectionName: 'tags';
   info: {
@@ -1405,6 +1494,8 @@ declare module '@strapi/strapi' {
       'api::lead.lead': ApiLeadLead;
       'api::news-room.news-room': ApiNewsRoomNewsRoom;
       'api::post.post': ApiPostPost;
+      'api::project-listing.project-listing': ApiProjectListingProjectListing;
+      'api::project.project': ApiProjectProject;
       'api::tag.tag': ApiTagTag;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;

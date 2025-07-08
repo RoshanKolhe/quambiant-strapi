@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_project_media_groups",
+  "info": {
+    "displayName": "mediaGroups"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "enumeration",
+      "enum": [
+        "Interior",
+        "Exterior"
+      ]
+    },
+    "images": {
+      "allowedTypes": [
+        "images",
+        "files"
+      ],
+      "type": "media",
+      "multiple": true,
+      "required": true
+    }
+  }
+}

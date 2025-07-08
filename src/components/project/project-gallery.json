@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_project_project_galleries",
+  "info": {
+    "displayName": "projectGallery"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string",
+      "required": true
+    },
+    "subHeading": {
+      "type": "string"
+    },
+    "mediaGroups": {
+      "displayName": "mediaGroups",
+      "type": "component",
+      "repeatable": true,
+      "component": "project.media-groups"
+    },
+    "video": {
+      "allowedTypes": [
+        "files",
+        "videos"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    }
+  }
+}

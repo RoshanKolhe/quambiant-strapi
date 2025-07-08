@@ -7,23 +7,7 @@
   },
   "options": {},
   "attributes": {
-    "Heading": {
-      "type": "string",
-      "required": true
-    },
-    "SubHeading": {
-      "type": "string",
-      "required": true
-    },
-    "ButtonText": {
-      "type": "string",
-      "required": true
-    },
-    "ButtonUrl": {
-      "type": "string",
-      "required": true
-    },
-    "HeroImage": {
+    "heroImage": {
       "type": "media",
       "multiple": false,
       "required": true,
@@ -33,15 +17,9 @@
         "videos"
       ]
     },
-    "HeroImageMobile": {
-      "type": "media",
-      "multiple": false,
-      "required": true,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos"
-      ]
+    "completionStatus": {
+      "type": "string",
+      "required": true
     }
   }
 }
