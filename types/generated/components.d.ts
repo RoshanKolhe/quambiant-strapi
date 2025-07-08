@@ -343,6 +343,7 @@ export interface ContactUsHero extends Struct.ComponentSchema {
 export interface ContactUsSocial extends Struct.ComponentSchema {
   collectionName: 'components_contact_us_socials';
   info: {
+    description: '';
     displayName: 'Social';
   };
   attributes: {
@@ -350,6 +351,7 @@ export interface ContactUsSocial extends Struct.ComponentSchema {
     FaceBook: Schema.Attribute.String & Schema.Attribute.Required;
     Instagram: Schema.Attribute.String;
     PhoneNumber: Schema.Attribute.BigInteger;
+    twitter: Schema.Attribute.String;
     YouTube: Schema.Attribute.String;
   };
 }

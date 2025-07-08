@@ -1,7 +1,8 @@
 {
   "collectionName": "components_contact_us_socials",
   "info": {
-    "displayName": "Social"
+    "displayName": "Social",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -19,6 +20,9 @@
       "type": "string"
     },
     "YouTube": {
+      "type": "string"
+    },
+    "twitter": {
       "type": "string"
     }
   }
