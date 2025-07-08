@@ -860,8 +860,7 @@ export interface ProjectCalculator extends Struct.ComponentSchema {
   attributes: {
     buttonLink: Schema.Attribute.String;
     buttonText: Schema.Attribute.String & Schema.Attribute.Required;
-    label: Schema.Attribute.String;
-    priceInCr: Schema.Attribute.Decimal & Schema.Attribute.Required;
+    priceItems: Schema.Attribute.Component<'project.price-items', true>;
   };
 }
 
@@ -976,6 +975,18 @@ export interface ProjectPlaces extends Struct.ComponentSchema {
     latitude: Schema.Attribute.String & Schema.Attribute.Required;
     longitude: Schema.Attribute.String & Schema.Attribute.Required;
     place: Schema.Attribute.Enumeration<['School', 'Restaurant', 'Hospitals']>;
+  };
+}
+
+export interface ProjectPriceItems extends Struct.ComponentSchema {
+  collectionName: 'components_project_price_items';
+  info: {
+    displayName: 'priceItems';
+    icon: 'archive';
+  };
+  attributes: {
+    label: Schema.Attribute.String & Schema.Attribute.Required;
+    priceInCr: Schema.Attribute.Decimal & Schema.Attribute.Required;
   };
 }
 
@@ -1119,6 +1130,7 @@ declare module '@strapi/strapi' {
       'project.media-groups': ProjectMediaGroups;
       'project.neighborhood': ProjectNeighborhood;
       'project.places': ProjectPlaces;
+      'project.price-items': ProjectPriceItems;
       'project.project-gallery': ProjectProjectGallery;
       'project.project-layout': ProjectProjectLayout;
       'project.project-overviews': ProjectProjectOverviews;

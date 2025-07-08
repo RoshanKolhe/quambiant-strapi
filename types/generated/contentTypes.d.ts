@@ -878,7 +878,7 @@ export interface ApiProjectListingProjectListing
     bannerImage: Schema.Attribute.Media<'images' | 'files'>;
     brochureFile: Schema.Attribute.Media<'images' | 'files'> &
       Schema.Attribute.Required;
-    calculator: Schema.Attribute.Component<'project.calculator', true>;
+    calculator: Schema.Attribute.Component<'project.calculator', false>;
     completionDateLabel: Schema.Attribute.String & Schema.Attribute.Required;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &

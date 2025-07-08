@@ -84,7 +84,7 @@
     "calculator": {
       "displayName": "calculator",
       "type": "component",
-      "repeatable": true,
+      "repeatable": false,
       "component": "project.calculator"
     },
     "neighborhood": {
