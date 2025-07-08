@@ -16,12 +16,6 @@
       "repeatable": false,
       "component": "common.awards"
     },
-    "Faq": {
-      "displayName": "Faq",
-      "type": "component",
-      "repeatable": false,
-      "component": "common.faq"
-    },
     "StatsSection": {
       "type": "component",
       "repeatable": false,
