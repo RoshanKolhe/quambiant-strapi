@@ -743,6 +743,7 @@ export interface ApiInvestorLoungeInvestorLounge
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    Faq: Schema.Attribute.Component<'common.faq', false>;
     Hero: Schema.Attribute.Component<'investor-lounge.hero', false>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<

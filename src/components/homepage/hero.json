@@ -7,7 +7,7 @@
   },
   "options": {},
   "attributes": {
-    "heroImage": {
+    "HeroImage": {
       "type": "media",
       "multiple": false,
       "required": true,
