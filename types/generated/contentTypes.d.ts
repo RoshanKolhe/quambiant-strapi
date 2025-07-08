@@ -642,6 +642,7 @@ export interface ApiHomepageHomepage extends Struct.SingleTypeSchema {
   };
   attributes: {
     Awards: Schema.Attribute.Component<'common.awards', false>;
+    ButtonUrl: Schema.Attribute.String & Schema.Attribute.Required;
     ContactUs: Schema.Attribute.Component<'common.contact-us', false>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -884,7 +885,7 @@ export interface ApiProjectListingProjectListing
       Schema.Attribute.Private;
     experience: Schema.Attribute.Component<'project.experience', false>;
     faq: Schema.Attribute.Component<'common.faq', false>;
-    Hero: Schema.Attribute.Component<'homepage.hero', false>;
+    hero: Schema.Attribute.Component<'project.hero', false>;
     keyFeatures: Schema.Attribute.Component<'project.key-features', true>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<

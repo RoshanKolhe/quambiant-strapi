@@ -525,9 +525,12 @@ export interface HomepageHero extends Struct.ComponentSchema {
     icon: 'house';
   };
   attributes: {
-    completionStatus: Schema.Attribute.String & Schema.Attribute.Required;
+    ButtonText: Schema.Attribute.String & Schema.Attribute.Required;
+    ButtonUrl: Schema.Attribute.String & Schema.Attribute.Required;
+    Heading: Schema.Attribute.String & Schema.Attribute.Required;
     heroImage: Schema.Attribute.Media<'images' | 'files' | 'videos'> &
       Schema.Attribute.Required;
+    SubHeading: Schema.Attribute.String;
   };
 }
 
@@ -891,6 +894,18 @@ export interface ProjectExperienceItem extends Struct.ComponentSchema {
   };
 }
 
+export interface ProjectHero extends Struct.ComponentSchema {
+  collectionName: 'components_project_heroes';
+  info: {
+    displayName: 'hero';
+  };
+  attributes: {
+    completionStatus: Schema.Attribute.String & Schema.Attribute.Required;
+    heroImage: Schema.Attribute.Media<'images' | 'files'> &
+      Schema.Attribute.Required;
+  };
+}
+
 export interface ProjectItems extends Struct.ComponentSchema {
   collectionName: 'components_project_items';
   info: {
@@ -1094,6 +1109,7 @@ declare module '@strapi/strapi' {
       'project.calculator': ProjectCalculator;
       'project.experience': ProjectExperience;
       'project.experience-item': ProjectExperienceItem;
+      'project.hero': ProjectHero;
       'project.items': ProjectItems;
       'project.key-features': ProjectKeyFeatures;
       'project.layout-slide': ProjectLayoutSlide;

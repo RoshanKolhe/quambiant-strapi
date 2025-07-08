@@ -70,6 +70,10 @@
       "type": "component",
       "repeatable": false,
       "component": "homepage.project-showcase"
+    },
+    "ButtonUrl": {
+      "type": "string",
+      "required": true
     }
   }
 }
