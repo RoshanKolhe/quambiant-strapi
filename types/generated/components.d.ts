@@ -854,13 +854,14 @@ export interface ProjectAwards extends Struct.ComponentSchema {
 export interface ProjectCalculator extends Struct.ComponentSchema {
   collectionName: 'components_project_calculators';
   info: {
+    description: '';
     displayName: 'calculator';
   };
   attributes: {
     buttonLink: Schema.Attribute.String;
     buttonText: Schema.Attribute.String & Schema.Attribute.Required;
     label: Schema.Attribute.String;
-    priceInCr: Schema.Attribute.Integer & Schema.Attribute.Required;
+    priceInCr: Schema.Attribute.Decimal & Schema.Attribute.Required;
   };
 }
 
@@ -974,7 +975,7 @@ export interface ProjectPlaces extends Struct.ComponentSchema {
   attributes: {
     latitude: Schema.Attribute.String & Schema.Attribute.Required;
     longitude: Schema.Attribute.String & Schema.Attribute.Required;
-    place: Schema.Attribute.String & Schema.Attribute.Required;
+    place: Schema.Attribute.Enumeration<['School', 'Restaurant', 'Hospitals']>;
   };
 }
 

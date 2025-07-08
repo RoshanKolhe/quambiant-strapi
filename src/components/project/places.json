@@ -15,8 +15,12 @@
       "required": true
     },
     "place": {
-      "type": "string",
-      "required": true
+      "type": "enumeration",
+      "enum": [
+        "School",
+        "Restaurant",
+        "Hospitals"
+      ]
     }
   }
 }

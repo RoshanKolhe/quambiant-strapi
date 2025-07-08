@@ -1,7 +1,8 @@
 {
   "collectionName": "components_project_calculators",
   "info": {
-    "displayName": "calculator"
+    "displayName": "calculator",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -10,7 +11,7 @@
     },
     "priceInCr": {
       "required": true,
-      "type": "integer"
+      "type": "decimal"
     },
     "buttonText": {
       "type": "string",
