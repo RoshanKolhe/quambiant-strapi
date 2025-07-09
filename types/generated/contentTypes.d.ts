@@ -910,6 +910,7 @@ export interface ApiProjectListingProjectListing
     >;
     publishedAt: Schema.Attribute.DateTime;
     shortDescription: Schema.Attribute.String & Schema.Attribute.Required;
+    slug: Schema.Attribute.UID<'projectName'>;
     tags: Schema.Attribute.Component<'homepage.tags', true>;
     timeline: Schema.Attribute.Component<'project.timeline', true>;
     updatedAt: Schema.Attribute.DateTime;

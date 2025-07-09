@@ -128,6 +128,10 @@
       "type": "component",
       "repeatable": false,
       "component": "project.hero"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "projectName"
     }
   }
 }
