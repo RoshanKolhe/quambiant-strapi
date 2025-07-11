@@ -866,6 +866,20 @@ export interface ProjectCalculator extends Struct.ComponentSchema {
   };
 }
 
+export interface ProjectConstructionProgress extends Struct.ComponentSchema {
+  collectionName: 'components_project_construction_progresses';
+  info: {
+    displayName: 'constructionProgress';
+  };
+  attributes: {
+    progress_stages: Schema.Attribute.Component<
+      'project.progress-stages',
+      true
+    >;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 export interface ProjectDevelopmentPlan extends Struct.ComponentSchema {
   collectionName: 'components_project_development_plans';
   info: {
@@ -1035,6 +1049,23 @@ export interface ProjectPriceItems extends Struct.ComponentSchema {
   };
 }
 
+export interface ProjectProgressStages extends Struct.ComponentSchema {
+  collectionName: 'components_project_progress_stages';
+  info: {
+    displayName: 'progress_stages';
+  };
+  attributes: {
+    date: Schema.Attribute.Date & Schema.Attribute.Required;
+    description: Schema.Attribute.String;
+    images: Schema.Attribute.Media<'images' | 'files', true>;
+    progress_stage_status: Schema.Attribute.Enumeration<
+      ['Not Started', 'In Progress', 'Completed']
+    > &
+      Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 export interface ProjectProjectGallery extends Struct.ComponentSchema {
   collectionName: 'components_project_project_galleries';
   info: {
@@ -1166,6 +1197,7 @@ declare module '@strapi/strapi' {
       'project.amenity-category': ProjectAmenityCategory;
       'project.awards': ProjectAwards;
       'project.calculator': ProjectCalculator;
+      'project.construction-progress': ProjectConstructionProgress;
       'project.development-plan': ProjectDevelopmentPlan;
       'project.experience': ProjectExperience;
       'project.experience-item': ProjectExperienceItem;
@@ -1179,6 +1211,7 @@ declare module '@strapi/strapi' {
       'project.phases': ProjectPhases;
       'project.places': ProjectPlaces;
       'project.price-items': ProjectPriceItems;
+      'project.progress-stages': ProjectProgressStages;
       'project.project-gallery': ProjectProjectGallery;
       'project.project-layout': ProjectProjectLayout;
       'project.project-overviews': ProjectProjectOverviews;

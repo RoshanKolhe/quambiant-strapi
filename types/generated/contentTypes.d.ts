@@ -880,6 +880,10 @@ export interface ApiProjectListingProjectListing
       Schema.Attribute.Required;
     calculator: Schema.Attribute.Component<'project.calculator', false>;
     completionDateLabel: Schema.Attribute.String & Schema.Attribute.Required;
+    constructionProgress: Schema.Attribute.Component<
+      'project.construction-progress',
+      false
+    >;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
