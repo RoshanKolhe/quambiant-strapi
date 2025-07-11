@@ -883,6 +883,10 @@ export interface ApiProjectListingProjectListing
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    developmentPlan: Schema.Attribute.Component<
+      'project.development-plan',
+      false
+    >;
     experience: Schema.Attribute.Component<'project.experience', false>;
     faq: Schema.Attribute.Component<'common.faq', false>;
     hero: Schema.Attribute.Component<'project.hero', false>;

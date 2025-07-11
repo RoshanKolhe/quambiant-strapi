@@ -866,6 +866,21 @@ export interface ProjectCalculator extends Struct.ComponentSchema {
   };
 }
 
+export interface ProjectDevelopmentPlan extends Struct.ComponentSchema {
+  collectionName: 'components_project_development_plans';
+  info: {
+    displayName: 'DevelopmentPlan';
+  };
+  attributes: {
+    completedPercent: Schema.Attribute.BigInteger & Schema.Attribute.Required;
+    estimatedCompletion: Schema.Attribute.String & Schema.Attribute.Required;
+    heading: Schema.Attribute.String & Schema.Attribute.Required;
+    investmentPotential: Schema.Attribute.String & Schema.Attribute.Required;
+    phases: Schema.Attribute.Component<'project.phases', true>;
+    preLaunchDate: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 export interface ProjectExperience extends Struct.ComponentSchema {
   collectionName: 'components_project_experiences';
   info: {
@@ -956,6 +971,16 @@ export interface ProjectMediaGroups extends Struct.ComponentSchema {
   };
 }
 
+export interface ProjectMilestone extends Struct.ComponentSchema {
+  collectionName: 'components_project_milestones';
+  info: {
+    displayName: 'milestone';
+  };
+  attributes: {
+    name: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 export interface ProjectNeighborhood extends Struct.ComponentSchema {
   collectionName: 'components_project_neighborhoods';
   info: {
@@ -963,6 +988,24 @@ export interface ProjectNeighborhood extends Struct.ComponentSchema {
   };
   attributes: {
     places: Schema.Attribute.Component<'project.places', true>;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface ProjectPhases extends Struct.ComponentSchema {
+  collectionName: 'components_project_phases';
+  info: {
+    displayName: 'phases';
+  };
+  attributes: {
+    description: Schema.Attribute.String;
+    image: Schema.Attribute.Media<'images' | 'files'> &
+      Schema.Attribute.Required;
+    milestone: Schema.Attribute.Component<'project.milestone', true>;
+    phaseStatus: Schema.Attribute.Enumeration<
+      ['Not Started', 'In Progress', 'Completed']
+    >;
+    timeline: Schema.Attribute.String & Schema.Attribute.Required;
     title: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
@@ -1123,6 +1166,7 @@ declare module '@strapi/strapi' {
       'project.amenity-category': ProjectAmenityCategory;
       'project.awards': ProjectAwards;
       'project.calculator': ProjectCalculator;
+      'project.development-plan': ProjectDevelopmentPlan;
       'project.experience': ProjectExperience;
       'project.experience-item': ProjectExperienceItem;
       'project.hero': ProjectHero;
@@ -1130,7 +1174,9 @@ declare module '@strapi/strapi' {
       'project.key-features': ProjectKeyFeatures;
       'project.layout-slide': ProjectLayoutSlide;
       'project.media-groups': ProjectMediaGroups;
+      'project.milestone': ProjectMilestone;
       'project.neighborhood': ProjectNeighborhood;
+      'project.phases': ProjectPhases;
       'project.places': ProjectPlaces;
       'project.price-items': ProjectPriceItems;
       'project.project-gallery': ProjectProjectGallery;

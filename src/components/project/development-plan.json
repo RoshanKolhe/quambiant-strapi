@@ -1,0 +1,35 @@
+{
+  "collectionName": "components_project_development_plans",
+  "info": {
+    "displayName": "DevelopmentPlan"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string",
+      "required": true
+    },
+    "estimatedCompletion": {
+      "type": "string",
+      "required": true
+    },
+    "preLaunchDate": {
+      "type": "string",
+      "required": true
+    },
+    "investmentPotential": {
+      "type": "string",
+      "required": true
+    },
+    "phases": {
+      "displayName": "phases",
+      "type": "component",
+      "repeatable": true,
+      "component": "project.phases"
+    },
+    "completedPercent": {
+      "type": "biginteger",
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_project_milestones",
+  "info": {
+    "displayName": "milestone"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

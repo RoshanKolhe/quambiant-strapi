@@ -132,6 +132,12 @@
     "slug": {
       "type": "uid",
       "targetField": "projectName"
+    },
+    "developmentPlan": {
+      "displayName": "DevelopmentPlan",
+      "type": "component",
+      "repeatable": false,
+      "component": "project.development-plan"
     }
   }
 }
