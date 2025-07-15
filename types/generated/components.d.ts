@@ -796,6 +796,19 @@ export interface InvestorLoungeHero extends Struct.ComponentSchema {
   };
 }
 
+export interface InvestorLoungeHotspot extends Struct.ComponentSchema {
+  collectionName: 'components_investor_lounge_hotspots';
+  info: {
+    displayName: 'hotspot';
+  };
+  attributes: {
+    description: Schema.Attribute.Text & Schema.Attribute.Required;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+      Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 export interface NewsroomHeroSection extends Struct.ComponentSchema {
   collectionName: 'components_newsroom_hero_sections';
   info: {
@@ -848,6 +861,36 @@ export interface ProjectAwards extends Struct.ComponentSchema {
   };
 }
 
+export interface ProjectBlock extends Struct.ComponentSchema {
+  collectionName: 'components_project_blocks';
+  info: {
+    displayName: 'block';
+  };
+  attributes: {
+    blockCard: Schema.Attribute.Component<'project.block-card', false>;
+    left: Schema.Attribute.Integer & Schema.Attribute.Required;
+    name: Schema.Attribute.String & Schema.Attribute.Required;
+    top: Schema.Attribute.Integer & Schema.Attribute.Required;
+  };
+}
+
+export interface ProjectBlockCard extends Struct.ComponentSchema {
+  collectionName: 'components_project_block_cards';
+  info: {
+    displayName: 'blockCard';
+  };
+  attributes: {
+    cardImage: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    > &
+      Schema.Attribute.Required;
+    floor: Schema.Attribute.Component<'project.floor', true>;
+    name: Schema.Attribute.String & Schema.Attribute.Required;
+    startingPrice: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 export interface ProjectCalculator extends Struct.ComponentSchema {
   collectionName: 'components_project_calculators';
   info: {
@@ -886,6 +929,41 @@ export interface ProjectExperienceItem extends Struct.ComponentSchema {
     highlightQuote: Schema.Attribute.String & Schema.Attribute.Required;
     highlightText: Schema.Attribute.String & Schema.Attribute.Required;
     image: Schema.Attribute.Media<'images' | 'files'> &
+      Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface ProjectFloor extends Struct.ComponentSchema {
+  collectionName: 'components_project_floors';
+  info: {
+    displayName: 'floor';
+  };
+  attributes: {
+    facing: Schema.Attribute.Enumeration<['NORTH', 'EAST', 'SOUTH', 'WEST']> &
+      Schema.Attribute.Required;
+    sellStatus: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 10;
+      }>;
+    type: Schema.Attribute.String & Schema.Attribute.Required;
+    typicalFloor: Schema.Attribute.BigInteger & Schema.Attribute.Required;
+  };
+}
+
+export interface ProjectHotspot extends Struct.ComponentSchema {
+  collectionName: 'components_project_hotspots';
+  info: {
+    displayName: 'hotspot';
+  };
+  attributes: {
+    block: Schema.Attribute.Component<'project.block', true>;
+    description: Schema.Attribute.Text & Schema.Attribute.Required;
+    image: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    > &
       Schema.Attribute.Required;
     title: Schema.Attribute.String & Schema.Attribute.Required;
   };
@@ -1087,13 +1165,18 @@ declare module '@strapi/strapi' {
       'investor-lounge.company-statistics': InvestorLoungeCompanyStatistics;
       'investor-lounge.connect-with-us': InvestorLoungeConnectWithUs;
       'investor-lounge.hero': InvestorLoungeHero;
+      'investor-lounge.hotspot': InvestorLoungeHotspot;
       'newsroom.hero-section': NewsroomHeroSection;
       'newsroom.news-room-slider': NewsroomNewsRoomSlider;
       'project.amenity-category': ProjectAmenityCategory;
       'project.awards': ProjectAwards;
+      'project.block': ProjectBlock;
+      'project.block-card': ProjectBlockCard;
       'project.calculator': ProjectCalculator;
       'project.experience': ProjectExperience;
       'project.experience-item': ProjectExperienceItem;
+      'project.floor': ProjectFloor;
+      'project.hotspot': ProjectHotspot;
       'project.items': ProjectItems;
       'project.key-features': ProjectKeyFeatures;
       'project.layout-slide': ProjectLayoutSlide;

@@ -885,6 +885,7 @@ export interface ApiProjectListingProjectListing
     experience: Schema.Attribute.Component<'project.experience', false>;
     faq: Schema.Attribute.Component<'common.faq', false>;
     Hero: Schema.Attribute.Component<'homepage.hero', false>;
+    hotspot: Schema.Attribute.Component<'project.hotspot', false>;
     keyFeatures: Schema.Attribute.Component<'project.key-features', true>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<

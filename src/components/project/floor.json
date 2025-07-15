@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_project_floors",
+  "info": {
+    "displayName": "floor"
+  },
+  "options": {},
+  "attributes": {
+    "typicalFloor": {
+      "type": "biginteger",
+      "required": true
+    },
+    "type": {
+      "type": "string",
+      "required": true
+    },
+    "sellStatus": {
+      "type": "string",
+      "required": true,
+      "maxLength": 10
+    },
+    "facing": {
+      "type": "enumeration",
+      "enum": [
+        "NORTH",
+        "EAST",
+        "SOUTH",
+        "WEST"
+      ],
+      "required": true
+    }
+  }
+}

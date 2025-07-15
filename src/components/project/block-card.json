@@ -1,0 +1,34 @@
+{
+  "collectionName": "components_project_block_cards",
+  "info": {
+    "displayName": "blockCard"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "startingPrice": {
+      "type": "string",
+      "required": true
+    },
+    "cardImage": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true,
+      "required": true
+    },
+    "floor": {
+      "displayName": "floor",
+      "type": "component",
+      "repeatable": true,
+      "component": "project.floor"
+    }
+  }
+}

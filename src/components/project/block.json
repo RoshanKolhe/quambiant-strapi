@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_project_blocks",
+  "info": {
+    "displayName": "block"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "top": {
+      "type": "integer",
+      "required": true
+    },
+    "left": {
+      "type": "integer",
+      "required": true
+    },
+    "blockCard": {
+      "displayName": "blockCard",
+      "type": "component",
+      "repeatable": false,
+      "component": "project.block-card"
+    }
+  }
+}
