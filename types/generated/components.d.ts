@@ -1007,15 +1007,13 @@ export interface ProjectHero extends Struct.ComponentSchema {
 export interface ProjectHotspot extends Struct.ComponentSchema {
   collectionName: 'components_project_hotspots';
   info: {
+    description: '';
     displayName: 'hotspot';
   };
   attributes: {
     block: Schema.Attribute.Component<'project.block', true>;
     description: Schema.Attribute.Text & Schema.Attribute.Required;
-    image: Schema.Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios',
-      true
-    > &
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
       Schema.Attribute.Required;
     title: Schema.Attribute.String & Schema.Attribute.Required;
   };
