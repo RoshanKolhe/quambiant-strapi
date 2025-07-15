@@ -1,7 +1,8 @@
 {
   "collectionName": "components_project_blocks",
   "info": {
-    "displayName": "block"
+    "displayName": "block",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -20,7 +21,7 @@
     "blockCard": {
       "displayName": "blockCard",
       "type": "component",
-      "repeatable": false,
+      "repeatable": true,
       "component": "project.block-card"
     }
   }

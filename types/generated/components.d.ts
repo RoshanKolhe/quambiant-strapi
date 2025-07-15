@@ -869,10 +869,11 @@ export interface ProjectAwards extends Struct.ComponentSchema {
 export interface ProjectBlock extends Struct.ComponentSchema {
   collectionName: 'components_project_blocks';
   info: {
+    description: '';
     displayName: 'block';
   };
   attributes: {
-    blockCard: Schema.Attribute.Component<'project.block-card', false>;
+    blockCard: Schema.Attribute.Component<'project.block-card', true>;
     left: Schema.Attribute.Integer & Schema.Attribute.Required;
     name: Schema.Attribute.String & Schema.Attribute.Required;
     top: Schema.Attribute.Integer & Schema.Attribute.Required;
@@ -983,6 +984,18 @@ export interface ProjectFloor extends Struct.ComponentSchema {
       }>;
     type: Schema.Attribute.String & Schema.Attribute.Required;
     typicalFloor: Schema.Attribute.BigInteger & Schema.Attribute.Required;
+  };
+}
+
+export interface ProjectHero extends Struct.ComponentSchema {
+  collectionName: 'components_project_heroes';
+  info: {
+    displayName: 'hero';
+  };
+  attributes: {
+    completionStatus: Schema.Attribute.String & Schema.Attribute.Required;
+    heroImage: Schema.Attribute.Media<'images' | 'files'> &
+      Schema.Attribute.Required;
   };
 }
 
@@ -1271,6 +1284,7 @@ declare module '@strapi/strapi' {
       'project.experience': ProjectExperience;
       'project.experience-item': ProjectExperienceItem;
       'project.floor': ProjectFloor;
+      'project.hero': ProjectHero;
       'project.hotspot': ProjectHotspot;
       'project.items': ProjectItems;
       'project.key-features': ProjectKeyFeatures;

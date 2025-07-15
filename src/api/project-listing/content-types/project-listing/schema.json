@@ -144,6 +144,11 @@
       "type": "component",
       "repeatable": false,
       "component": "project.construction-progress"
+    },
+    "hotspot": {
+      "type": "component",
+      "repeatable": false,
+      "component": "project.hotspot"
     }
   }
 }

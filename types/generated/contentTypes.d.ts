@@ -880,12 +880,20 @@ export interface ApiProjectListingProjectListing
       Schema.Attribute.Required;
     calculator: Schema.Attribute.Component<'project.calculator', false>;
     completionDateLabel: Schema.Attribute.String & Schema.Attribute.Required;
+    constructionProgress: Schema.Attribute.Component<
+      'project.construction-progress',
+      false
+    >;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    developmentPlan: Schema.Attribute.Component<
+      'project.development-plan',
+      false
+    >;
     experience: Schema.Attribute.Component<'project.experience', false>;
     faq: Schema.Attribute.Component<'common.faq', false>;
-    Hero: Schema.Attribute.Component<'homepage.hero', false>;
+    hero: Schema.Attribute.Component<'project.hero', false>;
     hotspot: Schema.Attribute.Component<'project.hotspot', false>;
     keyFeatures: Schema.Attribute.Component<'project.key-features', true>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
@@ -911,6 +919,7 @@ export interface ApiProjectListingProjectListing
     >;
     publishedAt: Schema.Attribute.DateTime;
     shortDescription: Schema.Attribute.String & Schema.Attribute.Required;
+    slug: Schema.Attribute.UID<'projectName'>;
     tags: Schema.Attribute.Component<'homepage.tags', true>;
     timeline: Schema.Attribute.Component<'project.timeline', true>;
     updatedAt: Schema.Attribute.DateTime;
