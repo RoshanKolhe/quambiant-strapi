@@ -873,7 +873,7 @@ export interface ProjectBlock extends Struct.ComponentSchema {
     displayName: 'block';
   };
   attributes: {
-    blockCard: Schema.Attribute.Component<'project.block-card', true>;
+    blockCard: Schema.Attribute.Component<'project.block-card', false>;
     left: Schema.Attribute.Integer & Schema.Attribute.Required;
     name: Schema.Attribute.String & Schema.Attribute.Required;
     top: Schema.Attribute.Integer & Schema.Attribute.Required;

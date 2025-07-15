@@ -21,7 +21,7 @@
     "blockCard": {
       "displayName": "blockCard",
       "type": "component",
-      "repeatable": true,
+      "repeatable": false,
       "component": "project.block-card"
     }
   }
