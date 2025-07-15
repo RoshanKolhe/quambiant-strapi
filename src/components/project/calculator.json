@@ -1,23 +1,23 @@
 {
   "collectionName": "components_project_calculators",
   "info": {
-    "displayName": "calculator"
+    "displayName": "calculator",
+    "description": ""
   },
   "options": {},
   "attributes": {
-    "label": {
-      "type": "string"
-    },
-    "priceInCr": {
-      "required": true,
-      "type": "integer"
-    },
     "buttonText": {
       "type": "string",
       "required": true
     },
     "buttonLink": {
       "type": "string"
+    },
+    "priceItems": {
+      "displayName": "priceItems",
+      "type": "component",
+      "repeatable": true,
+      "component": "project.price-items"
     }
   }
 }

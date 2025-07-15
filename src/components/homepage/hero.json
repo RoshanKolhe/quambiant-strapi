@@ -7,7 +7,7 @@
   },
   "options": {},
   "attributes": {
-    "heroImage": {
+    "HeroImage": {
       "type": "media",
       "multiple": false,
       "required": true,
@@ -17,7 +17,18 @@
         "videos"
       ]
     },
-    "completionStatus": {
+    "Heading": {
+      "type": "string",
+      "required": true
+    },
+    "SubHeading": {
+      "type": "string"
+    },
+    "ButtonText": {
+      "type": "string",
+      "required": true
+    },
+    "ButtonUrl": {
       "type": "string",
       "required": true
     }

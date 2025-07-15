@@ -1,0 +1,43 @@
+{
+  "collectionName": "components_project_phases",
+  "info": {
+    "displayName": "phases"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "phaseStatus": {
+      "type": "enumeration",
+      "enum": [
+        "Not Started",
+        "In Progress",
+        "Completed"
+      ]
+    },
+    "description": {
+      "type": "string"
+    },
+    "timeline": {
+      "type": "string",
+      "required": true
+    },
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "milestone": {
+      "displayName": "milestone",
+      "type": "component",
+      "repeatable": true,
+      "component": "project.milestone"
+    }
+  }
+}

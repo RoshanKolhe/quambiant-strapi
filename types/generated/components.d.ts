@@ -343,6 +343,7 @@ export interface ContactUsHero extends Struct.ComponentSchema {
 export interface ContactUsSocial extends Struct.ComponentSchema {
   collectionName: 'components_contact_us_socials';
   info: {
+    description: '';
     displayName: 'Social';
   };
   attributes: {
@@ -350,6 +351,7 @@ export interface ContactUsSocial extends Struct.ComponentSchema {
     FaceBook: Schema.Attribute.String & Schema.Attribute.Required;
     Instagram: Schema.Attribute.String;
     PhoneNumber: Schema.Attribute.BigInteger;
+    twitter: Schema.Attribute.String;
     YouTube: Schema.Attribute.String;
   };
 }
@@ -525,9 +527,12 @@ export interface HomepageHero extends Struct.ComponentSchema {
     icon: 'house';
   };
   attributes: {
-    completionStatus: Schema.Attribute.String & Schema.Attribute.Required;
-    heroImage: Schema.Attribute.Media<'images' | 'files' | 'videos'> &
+    ButtonText: Schema.Attribute.String & Schema.Attribute.Required;
+    ButtonUrl: Schema.Attribute.String & Schema.Attribute.Required;
+    Heading: Schema.Attribute.String & Schema.Attribute.Required;
+    HeroImage: Schema.Attribute.Media<'images' | 'files' | 'videos'> &
       Schema.Attribute.Required;
+    SubHeading: Schema.Attribute.String;
   };
 }
 
@@ -894,13 +899,42 @@ export interface ProjectBlockCard extends Struct.ComponentSchema {
 export interface ProjectCalculator extends Struct.ComponentSchema {
   collectionName: 'components_project_calculators';
   info: {
+    description: '';
     displayName: 'calculator';
   };
   attributes: {
     buttonLink: Schema.Attribute.String;
     buttonText: Schema.Attribute.String & Schema.Attribute.Required;
-    label: Schema.Attribute.String;
-    priceInCr: Schema.Attribute.Integer & Schema.Attribute.Required;
+    priceItems: Schema.Attribute.Component<'project.price-items', true>;
+  };
+}
+
+export interface ProjectConstructionProgress extends Struct.ComponentSchema {
+  collectionName: 'components_project_construction_progresses';
+  info: {
+    displayName: 'constructionProgress';
+  };
+  attributes: {
+    progress_stages: Schema.Attribute.Component<
+      'project.progress-stages',
+      true
+    >;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface ProjectDevelopmentPlan extends Struct.ComponentSchema {
+  collectionName: 'components_project_development_plans';
+  info: {
+    displayName: 'DevelopmentPlan';
+  };
+  attributes: {
+    completedPercent: Schema.Attribute.BigInteger & Schema.Attribute.Required;
+    estimatedCompletion: Schema.Attribute.String & Schema.Attribute.Required;
+    heading: Schema.Attribute.String & Schema.Attribute.Required;
+    investmentPotential: Schema.Attribute.String & Schema.Attribute.Required;
+    phases: Schema.Attribute.Component<'project.phases', true>;
+    preLaunchDate: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
 
@@ -1017,6 +1051,16 @@ export interface ProjectMediaGroups extends Struct.ComponentSchema {
   };
 }
 
+export interface ProjectMilestone extends Struct.ComponentSchema {
+  collectionName: 'components_project_milestones';
+  info: {
+    displayName: 'milestone';
+  };
+  attributes: {
+    name: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 export interface ProjectNeighborhood extends Struct.ComponentSchema {
   collectionName: 'components_project_neighborhoods';
   info: {
@@ -1028,14 +1072,63 @@ export interface ProjectNeighborhood extends Struct.ComponentSchema {
   };
 }
 
+export interface ProjectPhases extends Struct.ComponentSchema {
+  collectionName: 'components_project_phases';
+  info: {
+    displayName: 'phases';
+  };
+  attributes: {
+    description: Schema.Attribute.String;
+    image: Schema.Attribute.Media<'images' | 'files'> &
+      Schema.Attribute.Required;
+    milestone: Schema.Attribute.Component<'project.milestone', true>;
+    phaseStatus: Schema.Attribute.Enumeration<
+      ['Not Started', 'In Progress', 'Completed']
+    >;
+    timeline: Schema.Attribute.String & Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 export interface ProjectPlaces extends Struct.ComponentSchema {
   collectionName: 'components_project_places';
   info: {
+    description: '';
     displayName: 'places';
   };
   attributes: {
     latitude: Schema.Attribute.String & Schema.Attribute.Required;
     longitude: Schema.Attribute.String & Schema.Attribute.Required;
+    place: Schema.Attribute.Enumeration<['School', 'Restaurant', 'Hospitals']>;
+  };
+}
+
+export interface ProjectPriceItems extends Struct.ComponentSchema {
+  collectionName: 'components_project_price_items';
+  info: {
+    displayName: 'priceItems';
+    icon: 'archive';
+  };
+  attributes: {
+    label: Schema.Attribute.String & Schema.Attribute.Required;
+    priceInCr: Schema.Attribute.Decimal & Schema.Attribute.Required;
+  };
+}
+
+export interface ProjectProgressStages extends Struct.ComponentSchema {
+  collectionName: 'components_project_progress_stages';
+  info: {
+    displayName: 'progress_stages';
+  };
+  attributes: {
+    date: Schema.Attribute.Date & Schema.Attribute.Required;
+    description: Schema.Attribute.String;
+    images: Schema.Attribute.Media<'images' | 'files', true>;
+    progress_stage_status: Schema.Attribute.Enumeration<
+      ['Not Started', 'In Progress', 'Completed']
+    > &
+      Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
 
@@ -1173,6 +1266,8 @@ declare module '@strapi/strapi' {
       'project.block': ProjectBlock;
       'project.block-card': ProjectBlockCard;
       'project.calculator': ProjectCalculator;
+      'project.construction-progress': ProjectConstructionProgress;
+      'project.development-plan': ProjectDevelopmentPlan;
       'project.experience': ProjectExperience;
       'project.experience-item': ProjectExperienceItem;
       'project.floor': ProjectFloor;
@@ -1181,8 +1276,12 @@ declare module '@strapi/strapi' {
       'project.key-features': ProjectKeyFeatures;
       'project.layout-slide': ProjectLayoutSlide;
       'project.media-groups': ProjectMediaGroups;
+      'project.milestone': ProjectMilestone;
       'project.neighborhood': ProjectNeighborhood;
+      'project.phases': ProjectPhases;
       'project.places': ProjectPlaces;
+      'project.price-items': ProjectPriceItems;
+      'project.progress-stages': ProjectProgressStages;
       'project.project-gallery': ProjectProjectGallery;
       'project.project-layout': ProjectProjectLayout;
       'project.project-overviews': ProjectProjectOverviews;

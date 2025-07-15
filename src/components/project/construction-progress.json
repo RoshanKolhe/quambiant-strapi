@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_project_construction_progresses",
+  "info": {
+    "displayName": "constructionProgress"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "progress_stages": {
+      "displayName": "progress_stages",
+      "type": "component",
+      "repeatable": true,
+      "component": "project.progress-stages"
+    }
+  }
+}

@@ -507,7 +507,6 @@ export interface ApiCommonComponentCommonComponent
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     Disclaimer: Schema.Attribute.Component<'common.disclaimer', false>;
-    Faq: Schema.Attribute.Component<'common.faq', false>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -642,6 +641,7 @@ export interface ApiHomepageHomepage extends Struct.SingleTypeSchema {
   };
   attributes: {
     Awards: Schema.Attribute.Component<'common.awards', false>;
+    ButtonUrl: Schema.Attribute.String & Schema.Attribute.Required;
     ContactUs: Schema.Attribute.Component<'common.contact-us', false>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -743,6 +743,7 @@ export interface ApiInvestorLoungeInvestorLounge
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    Faq: Schema.Attribute.Component<'common.faq', false>;
     Hero: Schema.Attribute.Component<'investor-lounge.hero', false>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
@@ -877,7 +878,7 @@ export interface ApiProjectListingProjectListing
     bannerImage: Schema.Attribute.Media<'images' | 'files'>;
     brochureFile: Schema.Attribute.Media<'images' | 'files'> &
       Schema.Attribute.Required;
-    calculator: Schema.Attribute.Component<'project.calculator', true>;
+    calculator: Schema.Attribute.Component<'project.calculator', false>;
     completionDateLabel: Schema.Attribute.String & Schema.Attribute.Required;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
