@@ -972,10 +972,15 @@ export interface ProjectExperienceItem extends Struct.ComponentSchema {
 export interface ProjectFloor extends Struct.ComponentSchema {
   collectionName: 'components_project_floors';
   info: {
+    description: '';
     displayName: 'floor';
   };
   attributes: {
     facing: Schema.Attribute.Enumeration<['NORTH', 'EAST', 'SOUTH', 'WEST']> &
+      Schema.Attribute.Required;
+    sellstatus: Schema.Attribute.Enumeration<
+      ['Available', 'Reamaining', 'Soldout']
+    > &
       Schema.Attribute.Required;
     sellStatus: Schema.Attribute.String &
       Schema.Attribute.Required &

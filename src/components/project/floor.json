@@ -1,7 +1,8 @@
 {
   "collectionName": "components_project_floors",
   "info": {
-    "displayName": "floor"
+    "displayName": "floor",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -25,6 +26,15 @@
         "EAST",
         "SOUTH",
         "WEST"
+      ],
+      "required": true
+    },
+    "sellstatus": {
+      "type": "enumeration",
+      "enum": [
+        "Available",
+        "Reamaining",
+        "Soldout"
       ],
       "required": true
     }
