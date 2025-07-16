@@ -33,7 +33,6 @@
       "type": "enumeration",
       "enum": [
         "Available",
-        "Reamaining",
         "Soldout"
       ],
       "required": true

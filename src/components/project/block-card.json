@@ -1,7 +1,8 @@
 {
   "collectionName": "components_project_block_cards",
   "info": {
-    "displayName": "blockCard"
+    "displayName": "blockCard",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -14,6 +15,23 @@
       "required": true
     },
     "cardImage": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "floor": {
+      "displayName": "floor",
+      "type": "component",
+      "repeatable": true,
+      "component": "project.floor"
+    },
+    "brochure": {
       "allowedTypes": [
         "images",
         "files",
@@ -21,14 +39,7 @@
         "audios"
       ],
       "type": "media",
-      "multiple": true,
-      "required": true
-    },
-    "floor": {
-      "displayName": "floor",
-      "type": "component",
-      "repeatable": true,
-      "component": "project.floor"
+      "multiple": false
     }
   }
 }
