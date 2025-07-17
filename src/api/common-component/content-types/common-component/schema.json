@@ -45,6 +45,12 @@
       "type": "component",
       "repeatable": false,
       "component": "common.rera-disclaimer"
+    },
+    "Header": {
+      "displayName": "Header",
+      "type": "component",
+      "repeatable": false,
+      "component": "common.header"
     }
   }
 }

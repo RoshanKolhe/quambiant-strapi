@@ -251,6 +251,23 @@ export interface CommonFaq extends Struct.ComponentSchema {
   };
 }
 
+export interface CommonHeader extends Struct.ComponentSchema {
+  collectionName: 'components_common_headers';
+  info: {
+    displayName: 'Header';
+  };
+  attributes: {
+    AmaranthineBanner: Schema.Attribute.Media<'images' | 'files'> &
+      Schema.Attribute.Required;
+    Completed: Schema.Attribute.Media<'images' | 'files'> &
+      Schema.Attribute.Required;
+    Ongoing: Schema.Attribute.Media<'images' | 'files'> &
+      Schema.Attribute.Required;
+    Upcoming: Schema.Attribute.Media<'images' | 'files'> &
+      Schema.Attribute.Required;
+  };
+}
+
 export interface CommonHomeStoriesSlider extends Struct.ComponentSchema {
   collectionName: 'components_common_home_stories_sliders';
   info: {
@@ -1236,6 +1253,7 @@ declare module '@strapi/strapi' {
       'common.contact-us': CommonContactUs;
       'common.disclaimer': CommonDisclaimer;
       'common.faq': CommonFaq;
+      'common.header': CommonHeader;
       'common.home-stories-slider': CommonHomeStoriesSlider;
       'common.privacy-policy': CommonPrivacyPolicy;
       'common.qustion-and-answers': CommonQustionAndAnswers;
