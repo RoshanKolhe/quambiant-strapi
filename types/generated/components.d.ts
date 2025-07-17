@@ -985,7 +985,7 @@ export interface ProjectFloor extends Struct.ComponentSchema {
     sellStatus: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.SetMinMaxLength<{
-        maxLength: 10;
+        maxLength: 15;
       }>;
     type: Schema.Attribute.String & Schema.Attribute.Required;
     typicalFloor: Schema.Attribute.BigInteger & Schema.Attribute.Required;
