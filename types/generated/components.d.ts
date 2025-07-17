@@ -900,9 +900,11 @@ export interface ProjectBlock extends Struct.ComponentSchema {
 export interface ProjectBlockCard extends Struct.ComponentSchema {
   collectionName: 'components_project_block_cards';
   info: {
+    description: '';
     displayName: 'blockCard';
   };
   attributes: {
+    brochure: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     cardImage: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios',
       true
@@ -995,14 +997,12 @@ export interface ProjectFloor extends Struct.ComponentSchema {
   attributes: {
     facing: Schema.Attribute.Enumeration<['NORTH', 'EAST', 'SOUTH', 'WEST']> &
       Schema.Attribute.Required;
-    sellstatus: Schema.Attribute.Enumeration<
-      ['Available', 'Reamaining', 'Soldout']
-    > &
+    sellstatus: Schema.Attribute.Enumeration<['Available', 'Soldout']> &
       Schema.Attribute.Required;
     sellStatus: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.SetMinMaxLength<{
-        maxLength: 10;
+        maxLength: 15;
       }>;
     type: Schema.Attribute.String & Schema.Attribute.Required;
     typicalFloor: Schema.Attribute.BigInteger & Schema.Attribute.Required;

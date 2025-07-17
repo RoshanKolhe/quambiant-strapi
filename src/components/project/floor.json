@@ -17,7 +17,7 @@
     "sellStatus": {
       "type": "string",
       "required": true,
-      "maxLength": 10
+      "maxLength": 15
     },
     "facing": {
       "type": "enumeration",
@@ -33,7 +33,6 @@
       "type": "enumeration",
       "enum": [
         "Available",
-        "Reamaining",
         "Soldout"
       ],
       "required": true
