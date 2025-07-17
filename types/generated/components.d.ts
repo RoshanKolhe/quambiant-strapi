@@ -254,6 +254,7 @@ export interface CommonFaq extends Struct.ComponentSchema {
 export interface CommonHeader extends Struct.ComponentSchema {
   collectionName: 'components_common_headers';
   info: {
+    description: '';
     displayName: 'Header';
   };
   attributes: {
@@ -261,9 +262,14 @@ export interface CommonHeader extends Struct.ComponentSchema {
       Schema.Attribute.Required;
     Completed: Schema.Attribute.Media<'images' | 'files'> &
       Schema.Attribute.Required;
+    CompletedMobile: Schema.Attribute.Media<'images' | 'files'>;
     Ongoing: Schema.Attribute.Media<'images' | 'files'> &
       Schema.Attribute.Required;
+    OngoingMobile: Schema.Attribute.Media<'images' | 'files'> &
+      Schema.Attribute.Required;
     Upcoming: Schema.Attribute.Media<'images' | 'files'> &
+      Schema.Attribute.Required;
+    UpcomingMobile: Schema.Attribute.Media<'images' | 'files'> &
       Schema.Attribute.Required;
   };
 }

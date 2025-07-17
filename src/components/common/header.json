@@ -1,29 +1,48 @@
 {
   "collectionName": "components_common_headers",
   "info": {
-    "displayName": "Header"
+    "displayName": "Header",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "Upcoming": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
       "allowedTypes": [
         "images",
         "files"
-      ],
-      "type": "media",
-      "multiple": false,
-      "required": true
+      ]
     },
     "Ongoing": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
       "allowedTypes": [
         "images",
         "files"
-      ],
-      "type": "media",
-      "multiple": false,
-      "required": true
+      ]
     },
     "Completed": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "AmaranthineBanner": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "UpcomingMobile": {
       "allowedTypes": [
         "images",
         "files"
@@ -32,7 +51,7 @@
       "multiple": false,
       "required": true
     },
-    "AmaranthineBanner": {
+    "OngoingMobile": {
       "allowedTypes": [
         "images",
         "files"
@@ -40,6 +59,14 @@
       "type": "media",
       "multiple": false,
       "required": true
+    },
+    "CompletedMobile": {
+      "allowedTypes": [
+        "images",
+        "files"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }
