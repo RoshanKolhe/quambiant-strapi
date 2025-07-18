@@ -418,12 +418,14 @@ export interface CsrCsrResource extends Struct.ComponentSchema {
 export interface CsrEvents extends Struct.ComponentSchema {
   collectionName: 'components_csr_events';
   info: {
+    description: '';
     displayName: 'Events';
   };
   attributes: {
     date: Schema.Attribute.Date & Schema.Attribute.Required;
     Image: Schema.Attribute.Media<'images' | 'files'> &
       Schema.Attribute.Required;
+    LearnMore: Schema.Attribute.String & Schema.Attribute.Required;
     Location: Schema.Attribute.String;
     SubTitle: Schema.Attribute.String;
     Title: Schema.Attribute.String & Schema.Attribute.Required;
@@ -446,12 +448,14 @@ export interface CsrHero extends Struct.ComponentSchema {
 export interface CsrInitiatives extends Struct.ComponentSchema {
   collectionName: 'components_csr_initiatives';
   info: {
+    description: '';
     displayName: 'Initiatives';
   };
   attributes: {
     date: Schema.Attribute.Date & Schema.Attribute.Required;
     Image: Schema.Attribute.Media<'images' | 'files'> &
       Schema.Attribute.Required;
+    LearnMore: Schema.Attribute.String & Schema.Attribute.Required;
     Location: Schema.Attribute.String;
     SubTitle: Schema.Attribute.String;
     Title: Schema.Attribute.String & Schema.Attribute.Required;

@@ -1,7 +1,8 @@
 {
   "collectionName": "components_csr_initiatives",
   "info": {
-    "displayName": "Initiatives"
+    "displayName": "Initiatives",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -10,13 +11,13 @@
       "required": true
     },
     "Image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
       "allowedTypes": [
         "images",
         "files"
-      ],
-      "type": "media",
-      "multiple": false,
-      "required": true
+      ]
     },
     "SubTitle": {
       "type": "string"
@@ -26,6 +27,10 @@
     },
     "date": {
       "type": "date",
+      "required": true
+    },
+    "LearnMore": {
+      "type": "string",
       "required": true
     }
   }
