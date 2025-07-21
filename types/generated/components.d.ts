@@ -263,6 +263,8 @@ export interface CommonHeader extends Struct.ComponentSchema {
     Completed: Schema.Attribute.Media<'images' | 'files'> &
       Schema.Attribute.Required;
     CompletedMobile: Schema.Attribute.Media<'images' | 'files'>;
+    MarqueeImage: Schema.Attribute.Media<'images' | 'files'> &
+      Schema.Attribute.Required;
     Ongoing: Schema.Attribute.Media<'images' | 'files'> &
       Schema.Attribute.Required;
     OngoingMobile: Schema.Attribute.Media<'images' | 'files'> &

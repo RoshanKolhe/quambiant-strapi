@@ -43,15 +43,33 @@
       ]
     },
     "UpcomingMobile": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
       "allowedTypes": [
         "images",
         "files"
-      ],
-      "type": "media",
-      "multiple": false,
-      "required": true
+      ]
     },
     "OngoingMobile": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "CompletedMobile": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "MarqueeImage": {
       "allowedTypes": [
         "images",
         "files"
@@ -59,14 +77,6 @@
       "type": "media",
       "multiple": false,
       "required": true
-    },
-    "CompletedMobile": {
-      "allowedTypes": [
-        "images",
-        "files"
-      ],
-      "type": "media",
-      "multiple": false
     }
   }
 }
