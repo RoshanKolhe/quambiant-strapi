@@ -415,35 +415,6 @@ export interface ApiAboutUsAboutUs extends Struct.SingleTypeSchema {
   };
 }
 
-export interface ApiBlogSubscribeBlogSubscribe
-  extends Struct.CollectionTypeSchema {
-  collectionName: 'blog_subscribes';
-  info: {
-    displayName: 'blogSubscribe';
-    pluralName: 'blog-subscribes';
-    singularName: 'blog-subscribe';
-  };
-  options: {
-    draftAndPublish: false;
-  };
-  attributes: {
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    email: Schema.Attribute.Email & Schema.Attribute.Required;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::blog-subscribe.blog-subscribe'
-    > &
-      Schema.Attribute.Private;
-    publishedAt: Schema.Attribute.DateTime;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
 export interface ApiCareerContactCareerContact
   extends Struct.CollectionTypeSchema {
   collectionName: 'career_contacts';
@@ -1527,7 +1498,6 @@ declare module '@strapi/strapi' {
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
       'api::about-us.about-us': ApiAboutUsAboutUs;
-      'api::blog-subscribe.blog-subscribe': ApiBlogSubscribeBlogSubscribe;
       'api::career-contact.career-contact': ApiCareerContactCareerContact;
       'api::career.career': ApiCareerCareer;
       'api::common-component.common-component': ApiCommonComponentCommonComponent;
