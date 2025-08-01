@@ -25,6 +25,10 @@
     "SubTitle": {
       "type": "string",
       "required": true
+    },
+    "RedirectUrl": {
+      "type": "string",
+      "required": true
     }
   }
 }

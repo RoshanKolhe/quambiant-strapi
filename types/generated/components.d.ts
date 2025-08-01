@@ -524,6 +524,7 @@ export interface HomepageCard extends Struct.ComponentSchema {
     Date: Schema.Attribute.Date;
     Image: Schema.Attribute.Media<'images' | 'files'> &
       Schema.Attribute.Required;
+    RedirectUrl: Schema.Attribute.String & Schema.Attribute.Required;
     SubTitle: Schema.Attribute.String & Schema.Attribute.Required;
     Title: Schema.Attribute.String;
   };
