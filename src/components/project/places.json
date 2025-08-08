@@ -19,17 +19,28 @@
       "enum": [
         "School",
         "Restaurant",
-        "Hospitals"
+        "Hospitals",
+        "Connectivity & Transport",
+        "Education",
+        "Healthcare",
+        "Shopping & Daily Needs",
+        "Food & Leisure",
+        "Recreation & Fitness",
+        "Work & Business Hubs",
+        "Spiritual & Religious Places",
+        "Safety & Public Services",
+        "Future Development",
+        "Special Local Attractions"
       ]
     },
     "icon": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
       "allowedTypes": [
         "images",
         "files"
-      ],
-      "type": "media",
-      "multiple": false,
-      "required": true
+      ]
     }
   }
 }

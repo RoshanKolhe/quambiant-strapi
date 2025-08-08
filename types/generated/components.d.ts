@@ -1151,7 +1151,24 @@ export interface ProjectPlaces extends Struct.ComponentSchema {
       Schema.Attribute.Required;
     latitude: Schema.Attribute.String & Schema.Attribute.Required;
     longitude: Schema.Attribute.String & Schema.Attribute.Required;
-    place: Schema.Attribute.Enumeration<['School', 'Restaurant', 'Hospitals']>;
+    place: Schema.Attribute.Enumeration<
+      [
+        'School',
+        'Restaurant',
+        'Hospitals',
+        'Connectivity & Transport',
+        'Education',
+        'Healthcare',
+        'Shopping & Daily Needs',
+        'Food & Leisure',
+        'Recreation & Fitness',
+        'Work & Business Hubs',
+        'Spiritual & Religious Places',
+        'Safety & Public Services',
+        'Future Development',
+        'Special Local Attractions',
+      ]
+    >;
   };
 }
 
