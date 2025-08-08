@@ -1207,15 +1207,36 @@ export interface ProjectProjectLayout extends Struct.ComponentSchema {
 export interface ProjectProjectOverviews extends Struct.ComponentSchema {
   collectionName: 'components_project_project_overviews';
   info: {
+    description: '';
     displayName: ' projectOverviews';
   };
   attributes: {
     apartmentTypes: Schema.Attribute.String & Schema.Attribute.Required;
+    apartmentTypesLabel: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 15;
+      }>;
     images: Schema.Attribute.Media<'images' | 'files', true>;
     occupancyRate: Schema.Attribute.String & Schema.Attribute.Required;
+    occupancyRateLabel: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 15;
+      }>;
     title: Schema.Attribute.String & Schema.Attribute.Required;
     totalArea: Schema.Attribute.String & Schema.Attribute.Required;
+    totalAreaLabel: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 15;
+      }>;
     totalFloors: Schema.Attribute.String;
+    totalFloorsLabel: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 15;
+      }>;
   };
 }
 
