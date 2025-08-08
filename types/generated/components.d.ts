@@ -263,6 +263,10 @@ export interface CommonHeader extends Struct.ComponentSchema {
     Completed: Schema.Attribute.Media<'images' | 'files'> &
       Schema.Attribute.Required;
     CompletedMobile: Schema.Attribute.Media<'images' | 'files'>;
+    darkLogo: Schema.Attribute.Media<'images' | 'files'> &
+      Schema.Attribute.Required;
+    lightLogo: Schema.Attribute.Media<'images' | 'files'> &
+      Schema.Attribute.Required;
     MarqueeImage: Schema.Attribute.Media<'images' | 'files'> &
       Schema.Attribute.Required;
     Ongoing: Schema.Attribute.Media<'images' | 'files'> &
@@ -1143,6 +1147,8 @@ export interface ProjectPlaces extends Struct.ComponentSchema {
     displayName: 'places';
   };
   attributes: {
+    icon: Schema.Attribute.Media<'images' | 'files'> &
+      Schema.Attribute.Required;
     latitude: Schema.Attribute.String & Schema.Attribute.Required;
     longitude: Schema.Attribute.String & Schema.Attribute.Required;
     place: Schema.Attribute.Enumeration<['School', 'Restaurant', 'Hospitals']>;

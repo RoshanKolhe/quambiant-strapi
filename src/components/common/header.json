@@ -70,6 +70,24 @@
       ]
     },
     "MarqueeImage": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "darkLogo": {
+      "allowedTypes": [
+        "images",
+        "files"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "lightLogo": {
       "allowedTypes": [
         "images",
         "files"
