@@ -363,6 +363,8 @@ export interface ContactUsHero extends Struct.ComponentSchema {
     displayName: 'Hero';
   };
   attributes: {
+    ButtonText: Schema.Attribute.String & Schema.Attribute.Required;
+    ButtonUrl: Schema.Attribute.String & Schema.Attribute.Required;
     Heading: Schema.Attribute.String & Schema.Attribute.Required;
     HeroImage: Schema.Attribute.Media<'images' | 'files'> &
       Schema.Attribute.Required;

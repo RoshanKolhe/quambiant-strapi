@@ -11,12 +11,20 @@
       "required": true
     },
     "HeroImage": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
       "allowedTypes": [
         "images",
         "files"
-      ],
-      "type": "media",
-      "multiple": false,
+      ]
+    },
+    "ButtonText": {
+      "type": "string",
+      "required": true
+    },
+    "ButtonUrl": {
+      "type": "string",
       "required": true
     }
   }
