@@ -1,7 +1,8 @@
 {
   "collectionName": "components_project_heroes",
   "info": {
-    "displayName": "hero"
+    "displayName": "hero",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -10,12 +11,20 @@
       "required": true
     },
     "heroImage": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
       "allowedTypes": [
         "images",
         "files"
-      ],
-      "type": "media",
-      "multiple": false,
+      ]
+    },
+    "ButtonText": {
+      "type": "string",
+      "required": true
+    },
+    "ButtonUrl": {
+      "type": "string",
       "required": true
     }
   }

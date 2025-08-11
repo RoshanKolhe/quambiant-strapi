@@ -18,14 +18,6 @@
         "images",
         "files"
       ]
-    },
-    "ButtonText": {
-      "type": "string",
-      "required": true
-    },
-    "ButtonUrl": {
-      "type": "string",
-      "required": true
     }
   }
 }

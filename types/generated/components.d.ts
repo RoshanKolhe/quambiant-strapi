@@ -363,8 +363,6 @@ export interface ContactUsHero extends Struct.ComponentSchema {
     displayName: 'Hero';
   };
   attributes: {
-    ButtonText: Schema.Attribute.String & Schema.Attribute.Required;
-    ButtonUrl: Schema.Attribute.String & Schema.Attribute.Required;
     Heading: Schema.Attribute.String & Schema.Attribute.Required;
     HeroImage: Schema.Attribute.Media<'images' | 'files'> &
       Schema.Attribute.Required;
@@ -1031,9 +1029,12 @@ export interface ProjectFloor extends Struct.ComponentSchema {
 export interface ProjectHero extends Struct.ComponentSchema {
   collectionName: 'components_project_heroes';
   info: {
+    description: '';
     displayName: 'hero';
   };
   attributes: {
+    ButtonText: Schema.Attribute.String & Schema.Attribute.Required;
+    ButtonUrl: Schema.Attribute.String & Schema.Attribute.Required;
     completionStatus: Schema.Attribute.String & Schema.Attribute.Required;
     heroImage: Schema.Attribute.Media<'images' | 'files'> &
       Schema.Attribute.Required;
